@@ -14,6 +14,9 @@ app.post("/getData", (req, res) => {
 
 app.post("/", (req, res) => {
   console.log("Fetched");
+  res.json({
+    message: "Success",
+  });
 });
 
 app.listen(3000, () => {
