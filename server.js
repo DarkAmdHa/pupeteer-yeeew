@@ -12,7 +12,7 @@ app.post("/getData", (req, res) => {
   res.end();
 });
 
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   console.log("Fetched");
   res.json({
     message: "Success",
