@@ -12,6 +12,10 @@ app.post("/getData", (req, res) => {
   res.end();
 });
 
+app.post("/", (req, res) => {
+  console.log("Fetched");
+});
+
 app.listen(3000, () => {
   console.log("sd");
 });
