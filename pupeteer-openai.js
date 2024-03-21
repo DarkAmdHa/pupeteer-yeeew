@@ -3,7 +3,11 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const axios = require("axios");
 const path = require("path");
-const { getSpreadSheetValues } = require("./util/googleSheetsService");
+// const { getSpreadSheetValues } = require("./util/googleSheetsService");
+
+const apiKey = process.env.OPEN_AI_API_KEY;
+const spreadsheetId = process.env.SPREADSHEET_ID;
+const sheetName = "Sheet1";
 
 function sanitizeHTML(html) {
   try {
@@ -72,8 +76,18 @@ const puppeteerLoadFetch = async (link, justText, scrapeImages) => {
       });
     });
     sanitizedData = await await page.evaluate(() => {
-      return document.querySelector('[role="main"]').innerText;
+      return document.querySelector("body").innerText;
     });
+    // if(scrapingFrom.toLowerCase() === 'google'){
+    //   sanitizedData = await await page.evaluate(() => {
+    //     return document.querySelector('[role="main"]').innerText;
+    //   });
+
+    // }else{
+    //   sanitizedData = await await page.evaluate(() => {
+    //     return document.querySelector(body).innerText;
+    //   });
+    // }
   } else {
     const HTML = await page.content();
     sanitizedData = sanitizeHTML(HTML);
@@ -222,7 +236,6 @@ const regularOpenAi = async (link, prompt, apiKey) => {
           You will Write it in the third person. Make sure your writing is factual. Write a description of the accommodation.
            You will also be provided with a list of the user's existing site page links, based on which, where possible you will try to link your written content to other relevant existing pages of the user's site.
            Make sure the connections are natural, based on things like other surf spots in the area, similar accomodations etc.
-           You will make sure to return the resulting text wrapped in a html document which can then be created directly using once received
           `,
       },
       { role: "user", content: prompt },
@@ -330,7 +343,7 @@ const siteInfoScrapper = async (
 };
 
 const twoWayComm = async (link, prompt) => {
-  const maxIterations = 1;
+  const maxIterations = 5;
   let iteration = 1;
   const visitedLinks = [];
 
@@ -369,7 +382,7 @@ const twoWayComm = async (link, prompt) => {
 
 //Used to get listing of business' on platforms like Booking, Trip.com etc
 const findListingOnGoogle = async (businessName, platform) => {
-  const prompt = `Use the following Google.com code to look for ${businessName}'s listing on ${platform}. There might be ads, or similar looking pages, or reviews or other pages. We only want the listing on the ${platform}, not reviews or other pages related to it.If not found, return an empty string`;
+  const prompt = `Use the following Google.com code to look for ${businessName}'s listing on ${platform}. There might be ads, or similar looking pages, or reviews or other pages. We only want the listing on the ${platform}, not reviews or other pages related to it.If not found, return an error in json i.e error: "not found"`;
   const link = `https://www.google.com/search?q=${encodeURIComponent(
     businessName + " " + platform
   )}`;
@@ -429,7 +442,7 @@ const generateSEOContentWithGoogle = async (data) => {
   // Generate prompt for content generation
   const prompt = `
         You have been provided with the following data about a business:
-        ${JSON.stringify(businessData)}
+        ${JSON.stringify(data)}
 
         Additionally, you have retrieved the following relevant links from Google:
         ${JSON.stringify(relevantLinks)}
@@ -440,8 +453,6 @@ const generateSEOContentWithGoogle = async (data) => {
         - Incorporates information from the provided business data and relevant links.
         - Uses a tone that is informative and engaging, suitable for attracting potential customers.
         - Includes internal links to other relevant pages on the website where appropriate.
-
-        Return the resulting content as a styled HTML document.
     `;
   const content = await regularOpenAi("", prompt, apiKey);
   fs.writeFile("indexGoogleData.html", content, "utf8", (err) => {
@@ -451,88 +462,80 @@ const generateSEOContentWithGoogle = async (data) => {
       console.log("SEO content saved to indexGoogleData.html");
     }
   });
+  return content;
 };
 
-const generateDataFromSheet = async (range) => {
-  try {
-    const response = await getSpreadSheetValues(
-      spreadsheetId,
-      sheetName,
-      range
-    );
+// const generateDataFromSheet = async (range) => {
+//   try {
+//     const response = await getSpreadSheetValues(
+//       spreadsheetId,
+//       sheetName,
+//       range
+//     );
 
-    const rows = response.data.values;
-    if (rows.length) {
-      for (let i = 3; i <= 3; i++) {
-        // for (let i = 3; i < rows.length; i++) {
-        const businessName = rows[i][0];
-        const businessLink = rows[i][1];
-        //If link exists:
-        if (businessLink != "" && businessLink != "NA") {
-          const businessData = await generateBusinessData(
-            businessLink,
-            businessName
-          );
-        }
-      }
-    } else {
-      console.log("No Data Found");
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+//     const rows = response.data.values;
+//     if (rows.length) {
+//       for (let i = 3; i <= 3; i++) {
+//         // for (let i = 3; i < rows.length; i++) {
+//         const businessName = rows[i][0];
+//         const businessLink = rows[i][1];
+//         //If link exists:
+//         if (businessLink != "" && businessLink != "NA") {
+//           const businessData = await generateBusinessData(
+//             businessLink,
+//             businessName
+//           );
+//         }
+//       }
+//     } else {
+//       console.log("No Data Found");
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 const generateBusinessData = async (link, businessName) => {
-  const data = await twoWayComm(link, fullScrapperPrompt);
-  // const data = {
-  //   data: {
-  //     contact_email: 'stay@99surflodge.com',
-  //     phone_number: '',
-  //     whatsapp_number: '',
-  //     accomodation_type: 'Hotel',
-  //     trip_type: 'Learn to Surf, Luxury Holiday, Surfing in Comfort and Convenience',
-  //     contact_name: '',
-  //     location: 'Playa Popoyo, Nicaragua',
-  //     name: '99 SURF LODGE',
-  //     summary: '- Design Boutique Hotel for Surfers, Ocean Lovers, & Explorers offering a mix of a-la-carte or all-inclusive experiences.\n' +
-  //       '- Ultimate Surf experience includes ALL INCLUSIVE dining & surf with daily guide introductions and surfboard rental.\n' +
-  //       '- Surf Warm Up geared towards novices includes daily lessons at Beginner’s Bay with surfboard rental.\n' +
-  //       '- Personal Surf Coaching for advanced skill improvement.\n' +
-  //       '- Tow-In Blast and Boat Trip options for adrenaline junkies and open water adventures.\n' +
-  //       '- Additional services include private yoga classes, massage therapies, beach dining under the stars, and horseback riding along the Emerald Coastline.\n' +
-  //       '- Located in Playa Popoyo, Nicaragua, offering a luxurious surf and stay experience.',
-  //     nextLink: 'https://beds24.com/booking.php?propid=153302&referer=BookingLink'
-  //   }
-  // }
-  const bookingPage = await findListingOnGoogle(businessName, "Booking.com");
-  // const tripPage = await findListingOnGoogle(businessName, 'Trip.com')
-  // const trivagoPage = await findListingOnGoogle(businessName, 'Trivago.com')
+  let data = {};
+  try {
+    // 1. Scrape Business Data using Two Way communication:
+    data = await twoWayComm(link, fullScrapperPrompt);
+    //2. Scrape listings on booking,trip,trivago about business:
+    const bookingPage = await findListingOnGoogle(businessName, "Booking.com");
+    const tripPage = await findListingOnGoogle(businessName, "Trip.com");
+    const trivagoPage = await findListingOnGoogle(businessName, "Trivago.com");
 
-  //Scrape Pages from platforms
-  let bookingTextContent, tripTextContent, trivagoTextContent;
+    //Scrape Pages from platforms
+    let bookingTextContent, tripTextContent, trivagoTextContent;
 
-  // if(bookingPage.data){
-  //   bookingTextContent = await puppeteerLoadFetch(bookingPage.data)
-  //   data.bookingPageSummary = bookingTextContent;
-  // }
+    if (bookingPage.data) {
+      bookingTextContent = await puppeteerLoadFetch(bookingPage.data);
+      data.bookingPageSummary = bookingTextContent;
+    }
 
-  // if(tripPage.data){
-  //   tripTextContent = await puppeteerLoadFetch(tripPage.data)
-  //   data.data.tripPageSummary = bookingTextContent;
-  // }
-  // if(trivagoPage.data){
-  //   trivagoTextContent = await puppeteerLoadFetch(trivagoPage.data)
-  //   data.data.trivagoPageSummary = bookingTextContent;
-  // }
+    if (tripPage.data) {
+      tripTextContent = await puppeteerLoadFetch(tripPage.data);
+      data.tripPageSummary = bookingTextContent;
+    }
+    if (trivagoPage.data) {
+      trivagoTextContent = await puppeteerLoadFetch(trivagoPage.data);
+      data.trivagoPageSummary = bookingTextContent;
+    }
 
-  const slug = await slugBuilder(data.name, data.location);
-  data.slug = slug;
+    // 3. Build Business Slug for yeeew:
+    const slug = await slugBuilder(data.name, data.location);
+    data.slug = slug;
+
+    // 4. Generate content
+    const content = await generateSEOContentWithGoogle(data);
+    console.log(content);
+    data.content = content;
+  } catch (err) {
+    console.log("Error occurred during processing:", err.message);
+  }
 
   console.log(data);
-  debugger;
-
-  await generateSEOContentWithGoogle(data);
+  return data;
 };
 
 const fullScrapperPrompt = `Find the business' location, business name, contact email, phone number, contact name,
@@ -633,4 +636,6 @@ const slugBuilder = async (businessName, location) => {
 // generateSEOContent("7 Island Surf", testData)
 //
 
-generateDataFromSheet();
+// generateDataFromSheet();
+
+module.exports = generateBusinessData;
