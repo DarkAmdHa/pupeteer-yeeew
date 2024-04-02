@@ -1,10 +1,7 @@
-import pt from "puppeteer-extra";
+import pt from "puppeteer";
 import scrapeImages from "./scrapeImages.js";
 import saveImagesToS3 from "./saveImagesToS3.js";
 import sanitizeHTML from "./sanitizeHTML.js";
-
-import StealthPlugin from "puppeteer-extra-plugin-stealth";
-pt.use(StealthPlugin());
 
 const puppeteerLoadFetch = async (
   link,
