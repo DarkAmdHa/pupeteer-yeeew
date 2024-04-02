@@ -1,5 +1,5 @@
 const openAiWithPrompts = async (messages) => {
-  const apiKey = `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`;
+  const apiKey = process.env.OPEN_AI_API_KEY;
   try {
     var data = {
       messages: messages,

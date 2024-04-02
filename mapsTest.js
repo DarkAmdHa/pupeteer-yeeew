@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 // Your Google Maps API key
-const apiKey = "AIzaSyBatIoikNOYTXT-1PSAuffasP6sqoYd0mU";
+const apiKey = process.env.OPEN_AI_API_KEY;
 
 // Address or location to search for
 const address = "1600 Amphitheatre Parkway, Mountain View, CA";
