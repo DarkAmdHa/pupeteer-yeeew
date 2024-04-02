@@ -3,6 +3,9 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const axios = require("axios");
 const path = require("path");
+const dotenv = require("dotenv");
+
+dotenv.config();
 // const { getSpreadSheetValues } = require("./util/googleSheetsService");
 
 const apiKey = process.env.OPEN_AI_API_KEY;
@@ -47,7 +50,7 @@ function sanitizeHTML(html) {
     );
   }
 }
-const puppeteerLoadFetch = async (link, justText, scrapeImages) => {
+const puppeteerLoadFetch = async (link, justText, scrapeImages, dynamic) => {
   const browser = await pt.launch();
   const page = await browser.newPage();
 
@@ -56,13 +59,38 @@ const puppeteerLoadFetch = async (link, justText, scrapeImages) => {
   await page.goto(link);
 
   await page.screenshot({ path: "image.png" });
+  if (dynamic) {
+    // Scroll to the bottom of the page
+    await page.evaluate(async () => {
+      await new Promise((resolve, reject) => {
+        let totalHeight = 0;
+        const distance = 100;
+        const timer = setInterval(() => {
+          const scrollHeight = document.body.scrollHeight;
+          window.scrollBy(0, distance);
+          totalHeight += distance;
+          if (totalHeight >= scrollHeight) {
+            clearInterval(timer);
+            resolve();
+          }
+        }, 100);
+      });
+    });
+
+    await new Promise((r) => setTimeout(r, 5000));
+  }
+
+  await page.screenshot({ path: "image.png" });
 
   let sanitizedData;
   if (scrapeImages) {
     const images = await page.evaluate(() => {
       const imagesArray = [];
       document.querySelectorAll("img").forEach((image) => {
-        imagesArray.push(image.src);
+        if (image.naturalWidth * image.naturalHeight >= 500000) {
+          // Check image size
+          imagesArray.push(image.src);
+        }
       });
       return imagesArray;
     });
@@ -75,19 +103,9 @@ const puppeteerLoadFetch = async (link, justText, scrapeImages) => {
         a.outerHTML = "Link: " + a.href + " " + a.innerText + " ";
       });
     });
-    sanitizedData = await await page.evaluate(() => {
+    sanitizedData = await page.evaluate(() => {
       return document.querySelector("body").innerText;
     });
-    // if(scrapingFrom.toLowerCase() === 'google'){
-    //   sanitizedData = await await page.evaluate(() => {
-    //     return document.querySelector('[role="main"]').innerText;
-    //   });
-
-    // }else{
-    //   sanitizedData = await await page.evaluate(() => {
-    //     return document.querySelector(body).innerText;
-    //   });
-    // }
   } else {
     const HTML = await page.content();
     sanitizedData = sanitizeHTML(HTML);
@@ -343,7 +361,7 @@ const siteInfoScrapper = async (
 };
 
 const twoWayComm = async (link, prompt) => {
-  const maxIterations = 5;
+  const maxIterations = 6;
   let iteration = 1;
   const visitedLinks = [];
 
