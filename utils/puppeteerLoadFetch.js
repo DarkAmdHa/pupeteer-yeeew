@@ -10,7 +10,7 @@ const puppeteerLoadFetch = async (
   businessSlug,
   dynamic
 ) => {
-  const browser = await pt.launch({ args: ["--no-sandbox"] });
+  const browser = await pt.launch();
   const page = await browser.newPage();
 
   await page.setViewport({ width: 1000, height: 500 });

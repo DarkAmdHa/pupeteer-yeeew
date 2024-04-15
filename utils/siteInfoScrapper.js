@@ -12,9 +12,9 @@ const siteInfoScrapper = async (
     const messages = [
       {
         role: "system",
-        content: prompts.adminPrompt[0],
+        content: prompts.adminPrompt,
       },
-      { role: "user", content: prompts.fullScrapperPrompt[0] + cleanedContent },
+      { role: "user", content: prompts.fullScrapperPrompt + cleanedContent },
     ];
     if (previousData) {
       messages.push({

@@ -1,8 +1,13 @@
 import express from "express";
-import { generateBusinessDataHandler } from "../controllers/generateBusinessDataController.js";
+import {
+  generateBusinessDataHandler,
+  runDemoHandler,
+} from "../controllers/generateBusinessDataController.js";
 
 const router = express.Router();
 
-router.post("/getData", generateBusinessDataHandler);
+router.post("/", generateBusinessDataHandler);
+
+router.post("/demo", runDemoHandler);
 
 export default router;

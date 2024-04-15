@@ -143,7 +143,7 @@ app.post("/api/data/getData", async (req, res) => {
   //Final summary using all the summaries:
   const content = await generateSEOContentWithGoogle(
     businessData.data,
-    prompts.contentGenerationPrompt[0]
+    prompts.contentGenerationPrompt
   );
 
   businessData.data.finalData = content;

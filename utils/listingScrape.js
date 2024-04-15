@@ -2,7 +2,7 @@ import openAiWithPrompts from "./openAiWithPrompts.js";
 
 async function listingScrape(platformName, businessName, listingCode, prompts) {
   //Get summary from chatgpt of the result:
-  let listingPrompt = prompts.platformDataRetreivalPrompt[0];
+  let listingPrompt = prompts.platformDataRetreivalPrompt;
 
   listingPrompt = listingPrompt.replace("{{ platformName }}", platformName);
   listingPrompt = listingPrompt.replace("{{ businessName }}", businessName);
