@@ -5,6 +5,7 @@ const twoWayComm = async (link, prompts) => {
   const visitedLinks = [];
 
   let response = await siteInfoScrapper(link, prompts, undefined, false);
+  console.log("Scraped ", link);
   visitedLinks.push(link);
   while (
     response.nextLink &&
@@ -19,7 +20,7 @@ const twoWayComm = async (link, prompts) => {
       previousData,
       false
     );
-    console.log("Scraping Next Link: ", response.nextLink)
+    console.log("Scraping Next Link: ", response.nextLink);
     visitedLinks.push(response.nextLink);
   }
 
