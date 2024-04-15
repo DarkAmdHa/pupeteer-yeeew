@@ -14,6 +14,8 @@ app.use(express.json());
 
 app.use("/api/data", generateDataRoutes);
 
+app.use(errorHandler);
+
 if (process.env.NODE_ENV === "development") {
   app.get("/", (req, res) => {
     res.json({
@@ -21,8 +23,6 @@ if (process.env.NODE_ENV === "development") {
     });
   });
 }
-
-app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
