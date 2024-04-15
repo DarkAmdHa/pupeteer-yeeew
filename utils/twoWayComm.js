@@ -19,6 +19,7 @@ const twoWayComm = async (link, prompts) => {
       previousData,
       false
     );
+    console.log("Scraping Next Link: ", response.nextLink)
     visitedLinks.push(response.nextLink);
   }
 

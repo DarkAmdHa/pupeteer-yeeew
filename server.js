@@ -1,29 +1,32 @@
-const express = require("express");
-require("dotenv").config();
+import express from "express";
+import dotenv from "dotenv";
+import colors from "colors";
+
+import { errorHandler } from "./middleware/errorMiddleware.js";
+
+import generateDataRoutes from "./routes/generateDataRoutes.js";
+
+dotenv.config();
+
 const app = express();
 
 app.use(express.json());
 
-const generateBusinessData = require("./pupeteer-openai.js");
+app.use("/api/data", generateDataRoutes);
 
-app.post("/getData", async (req, res) => {
-  const businessName = req.body[0];
-  const businessLink = req.body[1];
-
-  const businessData = await generateBusinessData(businessLink, businessName);
-  console.log(businessData);
-  res.json({ businessData });
-});
-
-app.get("/", (req, res) => {
-  console.log("Fetched");
-  res.json({
-    message: "Success",
+if (process.env.NODE_ENV === "development") {
+  app.get("/", (req, res) => {
+    res.json({
+      message: "Success",
+    });
   });
-});
+}
 
+app.use(errorHandler);
 
-
-app.listen(3000, () => {
-  console.log("sd");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(
+    `App Running on Port ${PORT} in ${process.env.NODE_ENV} mode`.cyan.underline
+  );
 });

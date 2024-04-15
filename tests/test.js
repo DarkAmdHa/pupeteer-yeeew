@@ -3,8 +3,8 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const scrapeImages = require("./utils/scrapeImages");
-const saveImagesToS3 = require("./utils/saveImagesToS3");
+const scrapeImages = require("../utils/scrapeImages");
+const saveImagesToS3 = require("../utils/saveImagesToS3");
 
 const puppeteerLoadFetch = async (
   link,

@@ -49,7 +49,6 @@ const siteInfoScrapper = async (
       );
     }
     const parsedResponse = responseInJson["choices"][0]["message"]["content"];
-    console.log(parsedResponse);
     // Since our responses are also replied as JSON strings
     return JSON.parse(parsedResponse);
   } catch (er) {
