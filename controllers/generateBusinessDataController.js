@@ -30,8 +30,57 @@ export const generateBusinessDataHandler = asyncHandler(async (req, res) => {
   businessData = await twoWayComm(businessLink, prompts);
   //2. Scrape listings on booking,trip,trivago about business:
   const bookingPage = await findListingOnGoogle(businessName, "Booking.com");
+  const agodaPage = await findListingOnGoogle(businessName, "agoda.com");
   const tripPage = await findListingOnGoogle(businessName, "Trip.com");
   const trivagoPage = await findListingOnGoogle(businessName, "Trivago.com");
+  const perfectWavePage = await findListingOnGoogle(
+    businessName,
+    "perfectwavetravel.com"
+  );
+  const luexPage = await findListingOnGoogle(businessName, "luex.com");
+  const waterWaysTravelPage = await findListingOnGoogle(
+    businessName,
+    "waterwaystravel.com"
+  );
+  const worldSurfarisPage = await findListingOnGoogle(
+    businessName,
+    "worldsurfaris.com"
+  );
+  const awavePage = await findListingOnGoogle(businessName, "awave.com.au");
+  const atollTravelpage = await findListingOnGoogle(
+    businessName,
+    "atolltravel.com"
+  );
+  const surfHolidaysPage = await findListingOnGoogle(
+    businessName,
+    "surfholidays.com"
+  );
+  const surflinePage = await findListingOnGoogle(businessName, "surfline.com");
+  const lushPalmPage = await findListingOnGoogle(businessName, "lushpalm.com");
+  const thermalTravelPage = await findListingOnGoogle(
+    businessName,
+    "thermal.travel"
+  );
+  const bookSurfCampsPage = await findListingOnGoogle(
+    businessName,
+    "booksurfcamps.com"
+  );
+  const nomadSurfersPage = await findListingOnGoogle(
+    businessName,
+    "nomadsurfers.com"
+  );
+  const stokedSurfAdventruesPage = await findListingOnGoogle(
+    businessName,
+    "stokedsurfadventures.com"
+  );
+  const soulSurfTravelPage = await findListingOnGoogle(
+    businessName,
+    "soulsurftravel.com.au"
+  );
+  const surfersHypePage = await findListingOnGoogle(
+    businessName,
+    "surfershype.com"
+  );
 
   //Scrape Pages from platforms
   if (bookingPage.data) {
@@ -52,6 +101,33 @@ export const generateBusinessDataHandler = asyncHandler(async (req, res) => {
 
     businessData.bookingData = {
       link: bookingPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+  if (agodaPage.data) {
+    const result = await puppeteerLoadFetch(
+      agodaPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "Agoda.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.agodaData = {
+      link: agodaPage.data,
       textContent: listingDataFromOpenAi.summary
         ? listingDataFromOpenAi.summary
         : result.sanitizedData,
@@ -116,6 +192,440 @@ export const generateBusinessDataHandler = asyncHandler(async (req, res) => {
     };
   }
 
+  // perfectwavetravel.com
+  if (perfectWavePage.data) {
+    const result = await puppeteerLoadFetch(
+      perfectWavePage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "perfectwavetravel.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.perfectWaveData = {
+      link: perfectWavePage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // luex.com
+  if (luexPage.data) {
+    const result = await puppeteerLoadFetch(
+      luexPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "luex.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.luexData = {
+      link: luexPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // waterwaystravel.com
+  if (waterWaysTravelPage.data) {
+    const result = await puppeteerLoadFetch(
+      waterWaysTravelPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "waterwaystravel.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.waterWaysTravelData = {
+      link: waterWaysTravelPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // worldsurfaris.com
+  if (worldSurfarisPage.data) {
+    const result = await puppeteerLoadFetch(
+      worldSurfarisPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "worldsurfaris.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.worldSurfarisData = {
+      link: worldSurfarisPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // awave.com.au
+  if (awavePage.data) {
+    const result = await puppeteerLoadFetch(
+      awavePage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "awave.com.au",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.awaveData = {
+      link: awavePage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // atolltravel.com
+  if (atollTravelpage.data) {
+    const result = await puppeteerLoadFetch(
+      atollTravelpage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "atolltravel.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.atollTravelData = {
+      link: atollTravelpage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  if (surfHolidaysPage.data) {
+    const result = await puppeteerLoadFetch(
+      surfHolidaysPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "surfholidays.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.surfHolidaysData = {
+      link: surfHolidaysPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // surfline.com
+  if (surflinePage.data) {
+    const result = await puppeteerLoadFetch(
+      surflinePage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "surfline.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.surflineData = {
+      link: surflinePage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // lushpalm.com
+  if (lushPalmPage.data) {
+    const result = await puppeteerLoadFetch(
+      lushPalmPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "lushpalm.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.lushPalmData = {
+      link: lushPalmPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // thermal.travel
+  if (thermalTravelPage.data) {
+    const result = await puppeteerLoadFetch(
+      thermalTravelPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "thermal.travel",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.thermalTravelData = {
+      link: thermalTravelPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // booksurfcamps.com
+  if (bookSurfCampsPage.data) {
+    const result = await puppeteerLoadFetch(
+      bookSurfCampsPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "booksurfcamps.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.bookSurfCampsData = {
+      link: bookSurfCampsPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // nomadsurfers.com
+  if (nomadSurfersPage.data) {
+    const result = await puppeteerLoadFetch(
+      nomadSurfersPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "nomadsurfers.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.nomadSurfersData = {
+      link: nomadSurfersPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // stokedsurfadventures.com
+  if (stokedSurfAdventruesPage.data) {
+    const result = await puppeteerLoadFetch(
+      stokedSurfAdventruesPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "stokedsurfadventures.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.stokedSurfAdventuresData = {
+      link: stokedSurfAdventruesPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // soulsurftravel.com.au
+  if (soulSurfTravelPage.data) {
+    const result = await puppeteerLoadFetch(
+      soulSurfTravelPage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "soulsurftravel.com.au",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.soulSurfTravelData = {
+      link: soulSurfTravelPage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
+  // surfershype.com
+  if (surfersHypePage.data) {
+    const result = await puppeteerLoadFetch(
+      surfersHypePage.data,
+      true,
+      true,
+      generateSlug(businessName),
+      true
+    );
+
+    const listingDataFromOpenAi = await listingScrape(
+      "surfershype.com",
+      businessName,
+      result.sanitizedData,
+      prompts
+    );
+
+    businessData.surfersHypeData = {
+      link: surfersHypePage.data,
+      textContent: listingDataFromOpenAi.summary
+        ? listingDataFromOpenAi.summary
+        : result.sanitizedData,
+      highlights: listingDataFromOpenAi.highlights
+        ? listingDataFromOpenAi.highlights
+        : "",
+      images: result.uploadedImageLocations,
+    };
+  }
+
   // 3. Build Business Slug for yeeew:
   const slug = await slugBuilder(
     businessData.name,
@@ -131,7 +641,7 @@ export const generateBusinessDataHandler = asyncHandler(async (req, res) => {
   );
   businessData.content = content;
 
-  console.log(businessData);
+  console.log(JSON.stringify(businessData));
   res.json({ businessData });
 });
 

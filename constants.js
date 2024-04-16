@@ -1,278 +1,75 @@
-  export const sampleData = {
-    contact_email: "stay@99surflodge.com",
-    phone_number: "",
-    whatsapp_number: "",
-    accomodation_type: ["Hotel", "Resort"],
-    trip_type: ["Boat Charter", "Learn to Surf", "Luxury Holiday"],
-    contact_name: "",
-    location: "Playa Popoyo, Nicaragua",
-    summary:
-      "99 Surf Lodge is a design boutique hotel tailored for surfers, ocean lovers, and explorers. Offering a range of experiences from a-la-carte to all inclusive options, guests can build their dream surfing experience. Options include ultimate surf packages with board rental, surf coaching, tow-in blasts for adrenaline junkies, boat trips for open water adventures, and additional services such as yoga, massage, and horseback riding to explore the coastline. Dining under the stars at the ocean front Mesquite lounge presents a romantic experience. Located at Playa Popoyo, Nicaragua, it provides the perfect blend of adventure and relaxation.",
-    name: "99 SURF LODGE",
-    bookingData: {
-      link: "https://www.booking.com/hotel/ni/99-surf-lodge.html",
-      textContent:
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#basiclayout Skip to main content\n" +
-        "Link: https://www.booking.com/index.html\n" +
-        "\n" +
-        "USD\n" +
-        "\n" +
-        "\n" +
-        "Link: https://secure.booking.com/help.en-us.html\n" +
-        "Link: https://join.booking.com/?utm_source=topbar List your property Link: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=hotel&prompt=signin&state=Us4BOGnDijWXtatEXOfmDLUebVM-Js4Km1Yemt4omDzLebhSE3GCRntKCzLXnzeg_f6ct5OOyUM9IKefXreDb18iIMNXn6Q3cdY7b5EvVTyB8Q_C44bdgChNslXlFzLbADfhiaNd2OtH_2LjdX__EOnQ-lh3iwVKndGU7CAUG8NTN3E2FnyqScijXsbzDrBIR-1l5JvR8U27gAnfg0My0GSczYZNoqahGaEMKX3meH16zs_Kat5Hgs3o6kcT8AjCCERVJYodGK6xGBV8lisNXXI%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D Register\n" +
-        "Link: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=hotel&prompt=signin&state=Us4BOGnDijWXtatEXOfmDLUebVM-Js4Km1Yemt4omDzLebhSE3GCRntKCzLXnzeg_f6ct5OOyUM9IKefXreDb18iIMNXn6Q3cdY7b5EvVTyB8Q_C44bdgChNslXlFzLbADfhiaNd2OtH_2LjdX__EOnQ-lh3iwVKndGU7CAUG8NTN3E2FnyqScijXsbzDrBIR-1l5JvR8U27gAnfg0My0GSczYZNoqahGaEMKX3meH16zs_Kat5Hgs3o6kcT8AjCCERVJYodGK6xGBV8lisNXXI%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D Sign in\n" +
-        "Link: https://www.booking.com/index.html Stays Link: https://booking.com/flights/index.html Flights Link: https://www.booking.com/packages.html Flight + Hotel Link: https://www.booking.com/cars/index.html Car rentals Link: https://booking.com/pxgo?url=https%3A%2F%2Fcruises.booking.com%2F%3Fsid%3Db1c219ee833b424ac88f613a26b2e558%26label%3Dgen000nr-10CAsoqAFCDTk5LXN1cmYtbG9kZ2VIM1gEaOwBiAEBmAEzuAEF0gEOaGVhZGxlc3NjaHJvbWXYAQPoAQH4AQGIAgGoAgG4At2DqLAGwAIB0gIkNzM3MDZhNmMtNjgxYi00YTIxLWJiNGItNGQzNzJmOWY1Zjcz2AIB4AIB%26aid%3D304142%26uvi%3D00660a01dd42e1cd71f9e7a50ed6435389&lang=en&label=gen000nr-10CAsoqAFCDTk5LXN1cmYtbG9kZ2VIM1gEaOwBiAEBmAEzuAEF0gEOaGVhZGxlc3NjaHJvbWXYAQPoAQH4AQGIAgGoAgG4At2DqLAGwAIB0gIkNzM3MDZhNmMtNjgxYi00YTIxLWJiNGItNGQzNzJmOWY1Zjcz2AIB4AIB&aid=304142&token=UmFuZG9tSVYkc2RlIyh9Yek6N0IyIDltSndU7UA7CIMgkeKa2M32DsbzYOyWA3tMTKzMTNTTnO1Q25S7DOuzlRddwqE4-E7QtTJlFH4wUbkjRGUV_nXi3PV74L7V18SZSqeqZsasNnkyL4-a_W8ozLu3eWtqFkB5HivowHSsHdA8ujKuVQ2ccp0wZfFPDSXa8UWynQeXK8RiZw4CJu0ZrKI5A8Au3rnDFlcYJrMSRcOyU1_b166r1ptwRtERGbarmGkwkoHfEYgj5Cra--D9uawy3khBUl-7m5nLkTBSEA95Ev8vkNp7J5YzGlVrSACKDKS-tXRIuKj6vHiwbaDPXZGHbzuONkkZ4NPFHNZ-OZeh4H83eSe9i8gDsxTsbS-y86_nCxt2_4pJnOrmg9Vz4AyAnAu6rZynVKgWQI0CbZxsyZmX4uC1E4NnNXH_xMBKKKy4N_qtuMHmamuIWMj9E5rulNu6Yff9KAxDQyAAMZOemh9XADyZ9ZWnpB1bZxL0tBBtlObo370AC0mQwziZ1cjPeeXTCjdEi22Tbfm4jDI Cruises Link: https://www.booking.com/attractions/index.html Attractions Link: https://www.booking.com/taxi/index.html Airport taxis\n" +
-        "Link: https://www.booking.com/index.html Home\n" +
-        "Link: https://www.booking.com/hotel/index.html Hotels\n" +
-        "Link: https://www.booking.com/lodges/index.html All lodges\n" +
-        "Link: https://www.booking.com/lodges/country/ni.html Nicaragua\n" +
-        "Link: https://www.booking.com/lodges/region/ni/rivas.html Rivas Region\n" +
-        "Link: https://www.booking.com/lodges/city/ni/el-limon.html El Limón\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html 99 Surf Lodge (Lodge), El Limón (Nicaragua) Deals\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#hotelTmpl Overview\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#availability Info & prices\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#hp_facilities_box Amenities\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#policies House rules\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#important_info The fine print\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#blockdisplay4 Guest reviews (126)\n" +
-        "Search\n" +
-        "Destination/property name:\n" +
-        "\n" +
-        "Check-in date\n" +
-        "\n" +
-        "+Check-in Date\n" +
-        "Check-out date\n" +
-        "\n" +
-        "+Check-out Date\n" +
-        "\n" +
-        "2 adults · 0 children · 1 room\n" +
-        "\n" +
-        "I'm traveling for work\n" +
-        "\n" +
-        "Search\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#map_opened-hotel_sidebar_static_map Show on map\n" +
-        "\n" +
-        " \n" +
-        "\n" +
-        " \n" +
-        "Reserve\n" +
-        "\n" +
-        "We Price Match\n" +
-        "Beachfront\n" +
-        "Airport shuttle\n" +
-        "99 Surf Lodge\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#availability 99 Surf Lodge\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#map_opened-hotel_address Playa Santana, 00111 El Limón, Nicaragua – Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#map_opened-hotel_header Great location - show map\n" +
-        "\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#blockdisplay4 8.4Scored 8.4 Very Good Rated very good 126 reviews\n" +
-        "This is a carousel with rotating slides. It displays featured reviews of the property. Use the Next and Previous buttons to navigate.\n" +
-        "Most comfortable bed across all places. AC is not over head but somewhere away from the bed, which is great for AC sensitive people like me. In room dining is available and …\n" +
-        "\n" +
-        "Xiaoxia  United States of America\n" +
-        "Wow I’m so happy I found this hidden gem of peace! Looks exactly like the pictures and the communication with the resort before arriving was excellent. Me and my …\n" +
-        "\n" +
-        "Martinez  United States of America\n" +
-        "the location was beautiful, as was the pool. the rooms were good and the bed was comfortable. The food was very good, as was the service. the staff were very …\n" +
-        "\n" +
-        "Ajay  Canada\n" +
-        "Location Location Location Service Service Service Food Food Food\n" +
-        "\n" +
-        "Soydemencia  Peru\n" +
-        "it looked exactly like the photos. it was remote. it was peaceful and beautiful.\n" +
-        "\n" +
-        "Jennifer  United States of America\n" +
-        "Absolutely perfect spot to getaway from it all, the surf break is only like a 10 min walk down the beach, the staff was great, and the hotel itself actually looks like it …\n" +
-        "\n" +
-        "Marvin  United States of America\n" +
-        "The building, the pool, the attention was excellent as well.\n" +
-        "\n" +
-        "Norwin  Nicaragua\n" +
-        "Great design lodges and pool area with fantastic views of the sea. Pool was clean at all times and restaurant/ bar had great options of food&drinks. We had a …\n" +
-        "\n" +
-        "Tereze  Ireland\n" +
-        "breathtaking view! great customer experience. definitely coming back pretty soon\n" +
-        "\n" +
-        "Dharma  United States of America\n" +
-        "beautiful location right on the beach. awesome pool and restaurant the staff treated us incredibly well\n" +
-        "\n" +
-        "Brad  United States of America\n" +
-        "9.29.2\n" +
-        "Top-rated beach nearby Top-rated beach nearby\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#\tLink: https://www.booking.com/hotel/ni/99-surf-lodge.html#\tLink: https://www.booking.com/hotel/ni/99-surf-lodge.html#\tLink: https://www.booking.com/hotel/ni/99-surf-lodge.html#\tLink: https://www.booking.com/hotel/ni/99-surf-lodge.html# +36 photos\n" +
-        "Located a 10-minute walk from Santana Beach, 99 Surf Lodge offers an outdoor swimming pool, a fitness center and air-conditioned accommodations with a terrace and free WiFi.\n" +
-        "\n" +
-        "At the lodge you'll find a restaurant serving American, Australian and Asian cuisine. Vegetarian, dairy-free and vegan options can also be requested.\n" +
-        "\n" +
-        "The nearest airport is Augusto Cesar Sandino International, 60 miles from 99 Surf Lodge, and the property offers a paid airport shuttle service.\n" +
-        "\n" +
-        "Couples in particular like the location – they rated it 9.0 for a two-person trip.\n" +
-        "\n" +
-        "Distance in property description is calculated using © OpenStreetMap\n" +
-        "\n" +
-        "Most popular amenities\n" +
-        "Outdoor swimming pool\n" +
-        "Airport shuttle\n" +
-        "Non-smoking rooms\n" +
-        "Beachfront\n" +
-        "Fitness center\n" +
-        "Free WiFi\n" +
-        "Restaurant\n" +
-        "Room service\n" +
-        "Free parking\n" +
-        "Bar\n" +
-        "Property Highlights\n" +
-        "Top Location: Highly rated by recent guests (8.9)\n" +
-        "Free Private Parking Available On Site\n" +
-        "\n" +
-        "Reserve\n" +
-        "Link:\n" +
-        "Availability\n" +
-        "\n" +
-        "We Price Match\n" +
-        "Select dates to see this property's availability and prices\n" +
-        "\n" +
-        "\n" +
-        "Check-in Date\n" +
-        "—\n" +
-        "\n" +
-        "Check-out Date\n" +
-        "\n" +
-        "2 adults · 0 children · 1 room\n" +
-        "\n" +
-        "Search\n" +
-        "Room Type\n" +
-        "Number of guests\n" +
-        " \n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#RD225502701 Ocean Suite\n" +
-        "2 twin bedsor1 king bed\n" +
-        "\n" +
-        "Show prices\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#RD225502702 Double or Twin Room with Side Sea View\n" +
-        "1 king bedor2 twin beds\n" +
-        "\n" +
-        "Show prices\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#RD225502705 Apartment with Sea View\n" +
-        "2 twin bedsand1 king bed\n" +
-        "× 4\n" +
-        "\n" +
-        "Show prices\n" +
-        "Link: https://www.booking.com/hotel/ni/99-surf-lodge.html#RD225502706 Double or Twin Room\n" +
-        "1 king bedor2 twin beds\n" +
-        "\n" +
-        "Show prices\n" +
-        "Property practices\n" +
-        "This property told us they've implemented certain practices across some or all of these categories: waste, water, energy and greenhouse gases, destination and community, and nature.\n" +
-        "Learn more\n" +
-        "Guest reviews\n" +
-        "\n" +
-        "See availability\n" +
-        "\n" +
-        "8.4Scored 8.4\n" +
-        "Very GoodRated very good · 126 reviews\n" +
-        "Read all reviews\n" +
-        "Categories:\n" +
-        "Staff\n" +
-        "8.9\n" +
-        "Facilities\n" +
-        "8.4\n" +
-        "Cleanliness\n" +
-        "8.5\n" +
-        "Comfort\n" +
-        "8.6\n" +
-        "Value for money\n" +
-        "8.1\n" +
-        "Location\n" +
-        "8.9\n" +
-        "Free WiFi\n" +
-        "6.3\n" +
-        "High score for El Limón\n" +
-        "Select topics to read reviews:\n" +
-        "\n" +
-        "Location\n" +
-        "\n" +
-        "Swimming pool\n" +
-        "\n" +
-        "Dinner\n" +
-        "\n" +
-        "Breakfast\n" +
-        "\n" +
-        "View\n" +
-        "See what guests loved the most:\n" +
-        "\n" +
-        "Xiaoxia\n" +
-        "United States of America\n" +
-        "“Most comfortable bed across all places. AC is not over head but somewhere away from the bed, which is great for AC sensitive people like me. In room dining is available and all meals I tried is exceptional except pizza”\n" +
-        "Read more\n" +
-        "\n" +
-        "Martinez\n" +
-        "United States of America\n" +
-        "“Wow I’m so happy I found this hidden gem of peace! Looks exactly like the pictures and the communication with the resort before arriving was excellent. Me and my Dad had a great time doing yoga, massages, surfing and the food was so good! All the...”\n" +
-        "Read more\n" +
-        "\n" +
-        "Ajay\n" +
-        "Canada\n" +
-        "“the location was beautiful, as was the pool. the rooms were good and the bed was comfortable. The food was very good, as was the service. the staff were very accommodating and a pleasure to deal with.”\n" +
-        "Read more\n" +
-        "\n" +
-        "Soydemencia\n" +
-        "Peru\n" +
-        "“Location Location Location\n" +
-        "\n" +
-        "Service Service Service\n" +
-        "\n" +
-        "Food Food Food”\n" +
-        "Read more\n" +
-        "\n" +
-        "Jennifer\n" +
-        "United States of America\n" +
-        "“it looked exactly like the photos. it was remote. it was peaceful and beautiful.”\n" +
-        "Read more\n" +
-        "\n",
-      images: [
-        "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1711931874650_image.jpg",
-      ],
-    },
-    tripData: {
-      link: "https://us.trip.com/hotels/el-limon-1-hotel-detail-10002547/99-surf-lodge/",
-      textContent: "",
-      images: [],
-    },
-    trivagoData: {
-      link: "https://www.trivago.com/en-US/oar/hotel-99-surf-lodge-tola?search=100-7090534",
-      textContent:
-        "Link: https://www.trivago.com/\n" +
-        "Oops... Access Denied\n" +
-        "\n" +
-        "You are not allowed to view this page!\n" +
-        "If you think this is an error, please contact trivago.\n" +
-        "\n" +
-        "Errorcode: 0.ce5f32b8.1711931884.12f459c\n" +
-        "Your IP: 2402:ad80:137:898e:9c6c:b611:c3b6:2a43\n" +
-        "Affected URL: https://www.trivago.com/en-US/oar/hotel-99-surf-lodge-tola?search=100-7090534 Link: https://www.trivago.com/ Back to trivago",
-      images: [],
-    },
-    slug: "/central-america/nicaragua/rivas-province/popoyo/99-surf-lodge",
-    content:
-      "Nestled within the raw beauty of Playa Popoyo, Nicaragua, 99 Surf Lodge emerges as a beacon of bespoke luxury for surf enthusiasts and beach lovers alike. With its innovative design and tailored experiences, this boutique hotel and resort stand as a testament to a passion for the ocean and a quest for the perfect wave.\n" +
-      "\n" +
-      "At the heart of 99 Surf Lodge is a philosophy that intertwines adventure with relaxation, offering guests an array of experiences that can be custom-fit to their dreams. Whether one is looking to conquer the waves with the ultimate surf package, which includes board rental and surf coaching, or seeking the thrill of tow-in blasts for adrenaline junkies, the lodge caters to every level of surf exploration. Moreover, open water adventures via boat trips paint broad strokes of uncharted waters just waiting to be discovered.\n" +
-      "\n" +
-      "Beyond the surf, 99 Surf Lodge expands its embrace to those enchanted by the rhythms of the coastline. Yoga sessions offer a meditative balance against the vigorous activities, while massage services promise a soothing relief to a day well-spent. For the explorers at heart, horseback riding along the scenic trails reveals the diverse landscape that Nicaragua proudly offers.\n" +
-      "\n" +
-      "As the sun dips below the horizon, the Mesquite lounge transforms into a romantic getaway, where dining under the stars becomes not just a meal, but an experience. It’s a place where cuisine and conversation flow as freely as the ocean's tide, set against the soothing backdrop of the Pacific.\n" +
-      "\n" +
-      "Accommodation options at 99 Surf Lodge are as diverse as its experiences. Guests can choose from luxury hotel suites that offer breathtaking ocean views to resort-style living for those who prefer an extended stay under the sun. Categories range from the opulent Ocean Suite to the Apartment with Sea View, ensuring every stay is bathed in comfort and elegance. Not to forget, exciting meal options from American to Asian cuisine can tantalize the taste buds, catering to vegetarians, vegans, and those with dietary preferences alike.\n" +
-      "\n" +
-      "Its location in Playa Popoyo is not just a random pin on the map but a deliberate choice that places 99 Surf Lodge at the nexus of Nicaragua’s surf culture. This prime spot offers access to some of the region's most coveted surf spots, promising endless days of sun, sea, and surf.\n" +
-      "\n" +
-      "For those looking to immerse themselves in a surfing lifestyle or merely looking to slip away into a beachfront paradise, 99 Surf Lodge offers an unparalleled retreat. With its unique blend of adventure, relaxation, and cultural immersion, it beckons travelers to its doorsteps, promising a stay that’s as unforgettable as the waves that crash upon Playa Popoyo.\n" +
-      "\n" +
-      "For more information, booking inquiries, or to plan your next oceanic adventure, visit [99 Surf Lodge](https://www.booking.com/hotel/ni/99-surf-lodge.html).\n" +
-      "\n" +
-      "---\n" +
-      "\n" +
-      "Given the lack of provided internal links to other relevant pages on the website, the article creatively integrates the unique offerings and location details of 99 Surf Lodge. This ensures it remains engaging and informative for potential visitors, depicting a vivid array of reasons to choose 99 Surf Lodge as their next vacation destination.",
-  };
+export const sampleData = {
+  contact_email: "stay@99surflodge.com",
+  phone_number: "",
+  whatsapp_number: "",
+  accomodation_type: "Hotel, Resort",
+  trip_type:
+    "Learn to Surf, Luxury Holiday, Surfing in Comfort and Convenience",
+  contact_name: "",
+  location: "Playa Popoyo, Nicaragua",
+  summary:
+    "99 Surf Lodge is a picturesque destination for surfers, ocean lovers, and explorers located at Playa Popoyo, Nicaragua. This design boutique hotel offers a blend of luxurious and comfortable accommodations with a focus on providing an exceptional surfing and leisure experience. Guests can choose from a variety of surf-related activities, including surfboard rentals, personalized surf coaching, tow-in sessions for adrenaline junkies, boat trips for open water adventures, and horseback riding to explore the beautiful coastline. The lodge facilitates relaxation and wellness through private yoga classes, a range of massage techniques, and dining under the stars at the oceanfront Mesquite lounge. Whether you're a beginner looking to learn to surf at Beginner’s Bay or an experienced surfer seeking to improve your skills, 99 Surf Lodge provides an all-inclusive surf and dining experience designed to meet the needs of every guest.",
+  name: "99 Surf Lodge",
+  bookingData: {
+    link: "https://www.booking.com/hotel/ni/99-surf-lodge.html",
+    textContent:
+      "99 Surf Lodge is situated in a prime location, just a 10-minute walk from Santana Beach, offering outdoor swimming pools, a fitness center, and air-conditioned accommodations with a terrace and free WiFi. It features a restaurant serving a variety of cuisines including American, Australian, and Asian, with vegetarian, dairy-free, and vegan options available. The lodge is highly rated for its great location with a score of 8.9, particularly popular among couples. The nearest airport is Augusto Cesar Sandino International, 60 miles away, and the property offers a paid airport shuttle service. The amenities highly appreciated by guests include the outdoor swimming pool, fitness center, and the beachfront location, with free parking also available on site.",
+    highlights:
+      "Top Location: Highly rated by recent guests (8.9), Free Private Parking Available On Site, Outdoor swimming pool, Airport shuttle, Non-smoking rooms, Beachfront, Fitness center, Free WiFi, Restaurant, Room service, Free parking, Bar",
+    images: [
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237769543_image.jpg",
+    ],
+  },
+  agodaData: {
+    link: "https://www.agoda.com/en-ie/99-surf-lodge/hotel/el-limon-ni.html",
+    textContent:
+      "99 Surf Lodge is conveniently situated in the El Limon part of El Limon, Nicaragua, making it close to attractions and dining options. The lodge offers a variety of room sizes and types, including an apartment with sea view, an ocean suite, and double or twin rooms with side sea views or outdoor views, boasting amenities such as free Wi-Fi, air conditioning, private bathroom, and balcony or terrace among others. The property is well-equipped with facilities like a fitness center, outdoor swimming pool, solarium, and offers activities such as canoeing, fishing, and horseback riding. Dining options at 99 Surf Lodge include a restaurant serving American, Asian, and Australian cuisine. For guest convenience, the lodge provides airport transfer, a free car park, and shuttle service. Safety and cleaning measures are thoroughly implemented, including contactless check-in/out, anti-viral cleaning products, and temperature checks for staff and guests. The location of 99 Surf Lodge is highly rated, especially for its exceptional proximity to Costa Esmeralda Airport and other landmarks.",
+    highlights:
+      "Airport transfer, Car park, Shuttle service, Free Wi-Fi in all rooms!, Fitness center, Swimming pool [outdoor], Luggage storage, Contactless check-in/out",
+    images: [
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237794942_image.jpg",
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237797507_image.jpg",
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237800365_image.jpg",
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237802791_image.jpg",
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237804949_image.jpg",
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237807338_image.jpg",
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237809760_image.jpg",
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237812714_image.jpg",
+    ],
+  },
+  tripData: {
+    link: "https://us.trip.com/hotels/el-limon-1-hotel-detail-10002547/99-surf-lodge/",
+    textContent:
+      "99 Surf Lodge is a beach hotel located in Tola, steps away from Santana Beach and within proximity to several landmarks including Nahaulapa Thermal Baths (2.2 mi), Tide Pools (5.5 mi), Beginner Bay, Playa Rosada, and Popoyo. Established in 2017, it features an outdoor pool, fitness center, complimentary Wi-Fi, concierge services, and offers international cuisine at Taberna 99. The hotel provides various types of rooms, including family studios, economy rooms, comfort rooms, and design rooms with sea views, all equipped with amenities like air conditioning, private baths, minibars, and free Wi-Fi. Guest reviews highlight the spectacular location, exceptional service, great food and drinks, and activities like horse riding and massage services. However, some negative experiences were reported regarding customer service and room conditions. Opened in 2017, the lodge has a total of 6 rooms.",
+    highlights:
+      "Sunbathing Area, Outdoor Swimming Pool, Horse Riding, Massage Room, Fitness Room, Private Parking, Free Airport Pick-up Service, Airport Shuttle Service, Bar, Restaurant",
+    images: [
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237834704_image.jpg",
+      "https://yeeew-scraper-bucket.s3.amazonaws.com/99-surf-lodge/1713237837416_image.png",
+    ],
+  },
+  trivagoData: {
+    link: "https://www.trivago.com/en-US/oar/hotel-99-surf-lodge-tola?search=100-7090534",
+    textContent:
+      "Link: https://www.trivago.com/\nOops... Access Denied\n\nYou are not allowed to view this page!\nIf you think this is an error, please contact trivago.\n\nErrorcode: 0.ce5f32b8.1713237849.4cbeac0d\nYour IP: 2402:ad80:13a:4ddd:bd06:80cf:43ac:8a05\nAffected URL: https://www.trivago.com/en-US/oar/hotel-99-surf-lodge-tola?search=100-7090534\n\nLink: https://www.trivago.com/ Back to trivago",
+    highlights: "",
+    images: [],
+  },
+  bookSurfCampsData: {
+    link: "https://www.booksurfcamps.com/99-surf-lodge",
+    textContent:
+      "Sorry, you have been blocked\nYou are unable to access booksurfcamps.com\nWhy have I been blocked?\n\nThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\n\nWhat can I do to resolve this?\n\nYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.\n\nCloudflare Ray ID: 87510fc52d9cc914 • Your IP: Click to reveal • Performance & security by Link: https://www.cloudflare.com/5xx-error-landing Cloudflare",
+    highlights: "",
+    images: [],
+  },
+  surfersHypeData: {
+    link: "https://surfershype.com/surf-hotels",
+    textContent:
+      "Link: https://surfershype.com/surf-hotels#content Skip to content\nLink: Https://Surfershype.Com/ Surfers Hype\nMenu\nLink: https://surfershype.com/surf-gear Gear\nLink: https://surfershype.com/surf-training Training\nLink: https://surfershype.com/surf-travel Travel\nLink: https://surfershype.com/surf-blog Blog\nLink: https://surfershype.com/surf-culture Culture\nSearch\nSearch\nSurf Hotels\n\nA unique selection of the top surf hotels around the world\n\nExplore Surf Hotels\nWorldwide\nLink: https://surfershype.com/surf-hotels#brand-anchor BRANDS\nLink: https://surfershype.com/surf-hotels#destination-anchor DESTINATIONS\n\nThe idea of surf hotels took some time to take off, but nowadays, they are a popular surf travel segment. There are surfers out there who just want to go to a hotel, with all the trappings and pleasures of hotel living, but still have access to good surf nearby. \n\nLink: https://surfershype.com/surf-hotels#txt-anchor READ MORE\nSurf Hotel Destinations\nLink: https://surfershype.com/surf-hotels#na-anchor\nLink: https://surfershype.com/surf-hotels#na-anchor North America\nLink: https://surfershype.com/surf-hotels#sa-anchor\nLink: https://surfershype.com/surf-hotels#sa-anchor South America\nLink: https://surfershype.com/surf-hotels#eu-anchor\nLink: https://surfershype.com/surf-hotels#eu-anchor Europe\nLink: https://surfershype.com/surf-hotels#af-anchor\nLink: https://surfershype.com/surf-hotels#af-anchor Africa\nLink: https://surfershype.com/surf-hotels#as-anchor\nLink: https://surfershype.com/surf-hotels#as-anchor Asia\nLink: https://surfershype.com/surf-hotels#au-anchor\nLink: https://surfershype.com/surf-hotels#au-anchor Australia\nNorth America\nWe have gathered a selection of unique surf hotels in North America\nLink: https://www.booking.com/hotel/us/the-surfrider-malibu.xu.html?aid=7946809&no_rooms=1&group_adults=2\nThe Surfrider Malibu\nMalibu, California, US\n$\n518\n/night\n \nLink: https://www.booking.com/hotel/us/the-surfrider-malibu.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/us/the-surfjack-hotel-amp-swim-club.xu.html?aid=7946809&no_rooms=1&group_adults=2\nThe Surfjack Hotel & Swim Club\nHonolulu, Hawaii, US\n$\n222\n/night\n \nLink: https://www.booking.com/hotel/us/the-surfjack-hotel-amp-swim-club.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/ni/99-surf-lodge.xu.html?aid=7946809&no_rooms=1&group_adults=2\n99 Surf Lodge\nPlaya Santana, Nicaragua\n$\n82\n/night\n \nLink: https://www.booking.com/hotel/ni/99-surf-lodge.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nSouth America\nWe have gathered a selection of unique surf hotels in south America\nLink: https://www.booking.com/hotel/ec/hostal-kundalini.xu.html?aid=7946809&no_rooms=1&group_adults=2\nHotel Kundalini\nMontañita, Ecuador\n$\n75\n/night\n \nLink: https://www.booking.com/hotel/ec/hostal-kundalini.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/pe/casa-alma-loft.xu.html?aid=7946809&no_rooms=1&group_adults=2\nAlma Loft\nMáncora, Peru\n$\n150\n/night\n \nLink: https://www.booking.com/hotel/pe/casa-alma-loft.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/br/windsor-marapendi.xu.html?aid=7946809&no_rooms=1&group_adults=2\nWindsor Marapendi\nBrazil, Rio de Janeiro\n$\n115\n/night\n \nLink: https://www.booking.com/hotel/br/windsor-marapendi.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nEUROPE\nWe have gathered a selection of unique surf hotels in Europe\nLink: https://www.booking.com/hotel/fr/palym-biarritz.xu.html?aid=7946809&no_rooms=1&group_adults=2\nHôtel PALMITO\nBiarritz, France\n$\n194\n/night\n \nLink: https://www.booking.com/hotel/fr/palym-biarritz.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/es/vanilla-garden.xu.html?aid=7946809&no_rooms=1&group_adults=2\nVanilla Garden Boutique Hotel\nPlaya de las Americas, Tenerife\n$\n190\n/night\n \nLink: https://www.booking.com/hotel/es/vanilla-garden.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/pt/sol-peniche.xu.html?aid=7946809&no_rooms=1&group_adults=2\nStar Inn Peniche\nPeniche, Portugal\n$\n126\n/night\n \nLink: https://www.booking.com/hotel/pt/sol-peniche.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nAfrica\nWe have gathered a selection of unique surf hotels in Africa\nLink: https://www.booking.com/hotel/za/the-bay.xu.html?aid=7946809&no_rooms=1&group_adults=2\nThe Bay Hotel\nCape Town, South Africa\n$\n160\n/night\n \nLink: https://www.booking.com/hotel/za/the-bay.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/za/the-robberg-beach-lodge.xu.html?aid=7946809&no_rooms=1&group_adults=2\nThe Robberg Beach Lodge\nPlettenberg Bay, South Africa\n$\n200\n/night\n \nLink: https://www.booking.com/hotel/za/the-robberg-beach-lodge.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/ma/sol-house-taghazout.xu.html?aid=7946809&no_rooms=1&group_adults=2\nSol House Taghazout Bay Surf\nTaghazout, Morocco\n$\n150\n/night\n \nLink: https://www.booking.com/hotel/ma/sol-house-taghazout.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nAsia\nWe have gathered a selection of unique surf hotels in Asia\nLink: https://www.booking.com/hotel/id/le-cliff-bali.xu.html?aid=7946809&no_rooms=1&group_adults=2\nLe Cliff Bali\nUluwatu, Indonesia\n$\n121\n/night\n \nLink: https://www.booking.com/hotel/id/le-cliff-bali.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/lk/arugambay-roccos.xu.html?aid=7946809&no_rooms=1&group_adults=2\nArugambay Roccos\nArugam Bay, Sri Lanka\n$\n170\n/night\n \nLink: https://www.booking.com/hotel/lk/arugambay-roccos.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLamari Siargao\nSiargao, Philippines\n$\n80\n/night\n \nLink: https://www.booking.com/hotel/ph/lamari-siargao.html BOOK ONLINE\nAustralia\nWe have gathered a selection of unique surf hotels in Australia\nLink: https://www.booking.com/hotel/au/samphire-rottnest.xu.html?aid=7946809&no_rooms=1&group_adults=2\nSamphire Rottnest\nRottnest island , Australia\n$\n225\n/night\n \nLink: https://www.booking.com/hotel/au/samphire-rottnest.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/au/the-baxley-bondi.xu.html?aid=7946809&no_rooms=1&group_adults=2\nThe Baxley Bondi\nSydney, Australia\n$\n160\n/night\n \nLink: https://www.booking.com/hotel/au/the-baxley-bondi.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nLink: https://www.booking.com/hotel/au/gold-coast-international.xu.html?aid=7946809&no_rooms=1&group_adults=2\nQT Gold Coast\nSurfers Paradise, Australia\n$\n309\n/night\n \nLink: https://www.booking.com/hotel/au/gold-coast-international.xu.html?aid=7946809&no_rooms=1&group_adults=2 BOOK ONLINE\nThe Convenience Of Surf Hotels\n\nThe already existing hotel starts picking up surfers due to the proximity of a good surf spot nearby. They slowly adapt their lodgings to be more surf-friendly and accommodate people arriving with boards. There are many hotels, including brand names like Club Med, who have included surfing in their marketing campaigns and have attracted surf clientele. \n\nSurf hotels are suitable for family surf vacations. They are also ideal for beginner surf vacations if a surf school is part of the hotel offer. Surf hotels also offer hotel groups value, meaning that values and credits can be transferred between hotels for loyalty and for future travel options. \n\nThe convenience of dining options and bar facilities within the hotel setup cannot be discounted and are valuable assets for the travelling surfer with family. \n\nDidn't find the place you were looking for?\nPopular Surf Hotel Brands\nContact us if you want to be futured\n\nBrands with a unique selection of surf hotels\n\nLink: https://surfershype.com/surf-hotels# CONTACT ME NOW\nLink: https://surfershype.com/surf-hotels# CONTACT ME NOW\nContact us if you want to be futured\n\nBrands with a unique selection of surf hotels\n\nLink: https://surfershype.com/surf-hotels# CONTACT ME NOW\nLink: https://surfershype.com/surf-hotels# CONTACT ME NOW\nLink: Https://Surfershype.Com/ Surfers Hype\nLink: https://www.facebook.com/surfershype Facebook-f Link: https://www.instagram.com/surfershype/ Instagram Link: https://www.pinterest.com/surfershype/ Pinterest\nDiscover\nLink: https://surfershype.com/surf-gear Gear\nLink: https://surfershype.com/surf-training Training\nLink: https://surfershype.com/surf-travel Travel\nLink: https://surfershype.com/surf-culture Culture\nLinks\nLink: https://surfershype.com/surf-blog Blog\nLink: https://surfershype.com/about About Us\nLink: https://surfershype.com/contact Contact\nLink: https://surfershype.com/top-pages Top Pages\nJoin Our Surf Community.\nSUBSCRIBE\n2024 © Surfers Hype\nLink: https://surfershype.com/privacy-policy Privacy\nLink: https://surfershype.com/disclaimer Disclaimer\nLink: https://surfershype.com/terms-and-conditions Terms & Conditions",
+    highlights: "",
+    images: [],
+  },
+  slug: "`/central-america/nicaragua/rivas-province/playa-popoyo/99-surf-lodge`",
+  content:
+    "99 Surf Lodge located at Playa Popoyo, Nicaragua, stands as a premier destination for those looking to combine the adventure of surfing with the comfort of a luxury holiday. Anchored in the heart of one of Central America's most celebrated surfing locales, this design boutique hotel provides a seamless blend of style, comfort, and surf culture. With its beachfront setting, 99 Surf Lodge offers an immediate connection to Nicaragua's vibrant coastal environment, ensuring that guests are never more than a stone's throw away from the ocean's call.\n\n**About Accommodation**  \n99 Surf Lodge offers air-conditioned accommodations ranging from apartment-style rooms with sea views to cozy ocean suites and double or twin rooms with either side sea views or outdoor views. Every room boasts amenities like free Wi-Fi, private bathrooms, and terraces or balconies that overlook the magnificent Pacific. The outdoor swimming pools and fitness center add a touch of luxury to the stay, making it perfect for those who wish to relax in style after a day of surfing.\n\n**Food & Inclusions**  \nCulinary experiences at 99 Surf Lodge cater to a wide range of tastes, featuring American, Australian, and Asian cuisines, with dietary options such as vegetarian, dairy-free, and vegan available. The on-site restaurant and Mesquite lounge by the oceanfront offer dining under the stars, creating memorable meals for guests. The highly-acclaimed location is not only favored for its surf but also for its dining, ensuring that food is an integral part of the stay.\n\n**Surfing and Surf Spots**  \nPopoyo, known for its consistent waves, is a magnet for surfers of all levels. The lodge offers a variety of surf-related activities including surfboard rentals, personalized coaching, and boat trips to nearby surf spots. For beginners, Beginner’s Bay provides an ideal setting for learning, while experienced surfers can challenge themselves in more advanced waves that the area offers, such as Playa Santana, a mere 10-minute walk away. Other spots like Playa Rosada and the renowned Popoyo reef break offer diverse conditions for every surfer's preferences.\n\n**Getting there**  \n99 Surf Lodge is situated conveniently, with the nearest airport, Augusto Cesar Sandino International Airport, being 60 miles away. The lodge facilitates travel through paid airport shuttle services, ensuring a smooth transition from the plane to the poolside or the surf. These transportation services offer a hassle-free start to what promises to be a memorable stay.\n\n**Facilities and Activities**  \nBeyond surfing, guests can enjoy horseback riding along the coastline, yoga classes designed to enhance wellness, and various massage techniques to relax the body after a full day of activities. The fitness center and the option of embarking on open water adventures through boat trips round off the offerings at 99 Surf Lodge, creating a holistic vacation experience that combines adventure with tranquility.\n\n**Frequently Asked Questions (FAQ)**  \n- **What types of accommodations are available?**  \nGuests can choose from a variety of room types including apartment-style with sea views, ocean suites, and double or twin rooms.\n  \n- **What dining options are offered?**  \nThe lodge offers a restaurant with American, Australian, and Asian cuisines, along with options for various dietary needs.\n\n- **Are there surf spots nearby for beginners?**  \nYes, Beginner’s Bay is perfect for new surfers, whereas surrounding spots like Playa Rosada and Playa Santana cater to more experienced surfers.\n\n- **How do I arrange airport transportation?**  \nThe lodge offers paid airport shuttle services which can be arranged directly through their booking platforms or contact information.\n\n- **What activities can I do apart from surfing?**  \nActivities include horseback riding, yoga, wellness massages, and boat trips for open water adventures.\n\nThe potent mix of luxury, comfort, and thrilling surf experiences at 99 Surf Lodge caters to surfers, travelers, and vacationers looking for an unforgettable stay in one of Nicaragua's most breathtaking surf destinations. Whether it's catching early morning waves or unwinding in luxurious accommodations, 99 Surf Lodge provides an encompassing experience that spells the essence of a perfect surf holiday.",
+};
