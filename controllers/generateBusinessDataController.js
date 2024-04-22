@@ -854,8 +854,8 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
 
   const linksArr = Object.keys(links);
 
-  // for (var i = 0; i < linksArr.length; i++) {
-  for (var i = 0; i < 2; i++) {
+  for (var i = 0; i < linksArr.length; i++) {
+  // for (var i = 0; i < 2; i++) {
     const platformName = linksArr[i];
     const platformURL = links[linksArr[i]].platformURL;
     try{
