@@ -5,7 +5,7 @@ const twoWayComm = async (link, prompts) => {
   const visitedLinks = [];
 
   let response = await siteInfoScrapper(link, prompts, undefined, false);
-  console.log("Scraped ", link);
+  console.log(`Scraped ${link}`.green);
   visitedLinks.push(link);
   while (
     response.nextLink &&
@@ -14,17 +14,17 @@ const twoWayComm = async (link, prompts) => {
   ) {
     iteration++;
     const previousData = { previousReturnedData: response.data, visitedLinks };
+    console.log(`Scraping Next Link: ${response.nextLink}`.green);
     response = await siteInfoScrapper(
       response.nextLink,
       prompts,
       previousData,
       false
     );
-    console.log("Scraping Next Link: ", response.nextLink);
     visitedLinks.push(response.nextLink);
   }
 
-  console.log(response);
+  console.log(`Final Data after scraping site: ${JSON.stringify(response)}`.green);
   return response.data;
 };
 

@@ -11,7 +11,7 @@ const regularFetch = async (link) => {
 
     return sanitizeHTML(htmlContent);
   } catch (e) {
-    console.log(e);
+    console.log(`Issue with URL ${link}: ${e.message}`.red);
     throw new Error(
       "Link " + link + " not valid or not reachable: " + e.message
     );

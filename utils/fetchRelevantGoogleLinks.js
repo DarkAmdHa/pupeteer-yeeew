@@ -13,7 +13,7 @@ const fetchRelevantGoogleLinks = async (link, max) => {
   );
   await browser.close();
 
-  console.log(links);
+  console.log(`Relevant Yeew Links:${links}`.green);
 
   return links.slice(0, max);
 };
