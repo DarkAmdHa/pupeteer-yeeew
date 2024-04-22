@@ -37,12 +37,11 @@ const saveImagesToS3 = async (images, businessSlug) => {
       // Upload the image file to S3
       const uploadResult = await s3.upload(params).promise();
       console.log(
-        "File uploaded successfully. Location:",
-        uploadResult.Location
+        `File uploaded successfully. Location:${uploadResult.Location}`.green,
       );
       uploadedImageLocations.push(uploadResult.Location); // Add the upload location to the array
     } catch (error) {
-      console.error("Error uploading file:", error);
+      console.error(`Error uploading file:${error}`.red.inverse);
     }
   }
 

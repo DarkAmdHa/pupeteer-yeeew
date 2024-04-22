@@ -1,6 +1,6 @@
 import regularFetch from "./regularFetch.js";
 
-const regularOpenAi = async (link, prompt) => {
+const regularOpenAi = async (link, prompt, returnAsJson = false) => {
   const apiKey = process.env.OPEN_AI_API_KEY;
   let cleanedContent;
   try {
@@ -30,6 +30,8 @@ const regularOpenAi = async (link, prompt) => {
       model: "gpt-4-turbo-preview",
     };
 
+    if (returnAsJson) data["response_format"] = { type: "json_object" };
+
     var response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       body: JSON.stringify(data),
@@ -49,7 +51,7 @@ const regularOpenAi = async (link, prompt) => {
     }
 
     const parsedResponse = responseInJson["choices"][0]["message"]["content"];
-    console.log(parsedResponse);
+    console.log(`Open AI Response: ${parsedResponse}`.green);
     // Since our responses are also replied as JSON strings
     return parsedResponse;
   } catch (er) {

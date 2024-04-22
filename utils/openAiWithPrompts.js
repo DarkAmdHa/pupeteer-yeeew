@@ -27,7 +27,7 @@ const openAiWithPrompts = async (messages) => {
     }
 
     const parsedResponse = responseInJson["choices"][0]["message"]["content"];
-    console.log(parsedResponse);
+    console.log(`Open AI Response: ${parsedResponse}`.green);
     // Since our responses are also replied as JSON strings
     return parsedResponse;
   } catch (er) {

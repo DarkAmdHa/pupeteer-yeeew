@@ -36,7 +36,7 @@ const slugBuilder = async (businessName, location, prompt) => {
     }
 
     const parsedResponse = responseInJson["choices"][0]["message"]["content"];
-    console.log(parsedResponse);
+    console.log(`Open AI Response - Slug Builder: ${parsedResponse}`.green);
     // Since our responses are also replied as JSON strings
     return parsedResponse;
   } catch (er) {

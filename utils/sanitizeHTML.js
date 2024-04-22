@@ -30,7 +30,7 @@ export default function sanitizeHTML(html) {
 
     return finalContent;
   } catch (e) {
-    console.log(e);
+    console.log(`Issue with URL ${url}: ${e.message}`.red);
     throw new Error(
       "Link " + url + " not valid or not reachable: " + e.message
     );

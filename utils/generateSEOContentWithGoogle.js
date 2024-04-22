@@ -2,7 +2,11 @@ import fetchRelevantGoogleLinks from "./fetchRelevantGoogleLinks.js";
 import puppeteerLoadFetch from "./puppeteerLoadFetch.js";
 import regularOpenAi from "./regularOpenAi.js";
 
-const generateSEOContentWithGoogle = async (data, prompt) => {
+const generateSEOContentWithGoogle = async (
+  data,
+  prompt,
+  returnAsJson = false
+) => {
   //Get relevant google data:
   const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(
     data.location + " " + "yeeew.com"
@@ -29,7 +33,7 @@ const generateSEOContentWithGoogle = async (data, prompt) => {
     JSON.stringify(relevantLinks)
   );
 
-  const content = await regularOpenAi("", prompt2);
+  const content = await regularOpenAi("", prompt2, returnAsJson);
   return content;
 };
 

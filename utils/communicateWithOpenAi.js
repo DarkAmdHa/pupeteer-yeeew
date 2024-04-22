@@ -48,7 +48,7 @@ const communicateWithOpenAi = async (link, prompt) => {
       );
     }
     const parsedResponse = responseInJson["choices"][0]["message"]["content"];
-    console.log(parsedResponse);
+    console.log(`Open AI Response: ${parsedResponse}`.green);
     // Since our responses are also replied as JSON strings
     return JSON.parse(parsedResponse);
   } catch (er) {
