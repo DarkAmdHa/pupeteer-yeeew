@@ -934,9 +934,9 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
 // @route   POST /api/data/scrape-site
 // @access  Public
 export const scrapeBusinessSite = asyncHandler(async (req, res) => {
-  // const businessData2 = regionalOverviewSampleData;
-  // res.json({ businessData: businessData2 });
-  // return;
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
   const prompts = req.body.prompts;
   const data = req.body.data;
 
@@ -961,9 +961,9 @@ export const scrapeBusinessSite = asyncHandler(async (req, res) => {
 // @route   POST /api/data/scrape-platforms-1
 // @access  Public
 export const scrapePlatforms = asyncHandler(async (req, res) => {
-  // const businessData2 = regionalOverviewSampleData;
-  // res.json({ businessData: businessData2 });
-  // return;
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
@@ -1046,9 +1046,9 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
 // @route   POST /api/data/scrape-platforms-2
 // @access  Public
 export const scrapePlatforms2 = asyncHandler(async (req, res) => {
-  // const businessData2 = regionalOverviewSampleData;
-  // res.json({ businessData: businessData2 });
-  // return;
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
@@ -1133,9 +1133,9 @@ export const scrapePlatforms2 = asyncHandler(async (req, res) => {
 // @route   POST /api/data/slug-build
 // @access  Public
 export const buildBusinessSlug = asyncHandler(async (req, res) => {
-  // const businessData2 = regionalOverviewSampleData;
-  // res.json({ businessData: businessData2 });
-  // return;
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
@@ -1156,9 +1156,9 @@ export const buildBusinessSlug = asyncHandler(async (req, res) => {
 // @route   POST /api/data/content-generation
 // @access  Public
 export const generateFinalContent = asyncHandler(async (req, res) => {
-  // const businessData2 = regionalOverviewSampleData;
-  // res.json({ businessData: businessData2 });
-  // return;
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
