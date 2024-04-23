@@ -958,7 +958,7 @@ export const scrapeBusinessSite = asyncHandler(async (req, res) => {
 });
 
 // @desc    Scrape platforms
-// @route   POST /api/data/scrape-platforms
+// @route   POST /api/data/scrape-platforms-1
 // @access  Public
 export const scrapePlatforms = asyncHandler(async (req, res) => {
   // const businessData2 = regionalOverviewSampleData;
@@ -983,6 +983,79 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
     waterwaysSurf: { platformURL: "waterwaystravel.com", listingUrl: "" },
     worldSafaris: { platformURL: "worldsurfaris.com", listingUrl: "" },
     awave: { platformURL: "awave.com.au", listingUrl: "" },
+  };
+
+  const linksArr = Object.keys(links);
+
+  for (var i = 0; i < linksArr.length; i++) {
+    // for (var i = 0; i < 2; i++) {
+    const platformName = linksArr[i];
+    const platformURL = links[linksArr[i]].platformURL;
+    try {
+      const listingUrlData = await findListingOnGoogle(
+        businessName,
+        platformURL
+      );
+      if (listingUrlData.data) {
+        //Scrape Pages from platforms
+        links[linksArr[i]].listingUrl = listingUrlData.data;
+        const result = await puppeteerLoadFetch(
+          listingUrlData.data,
+          true,
+          true,
+          generateSlug(businessName),
+          true
+        );
+        const listingDataFromOpenAi = await listingScrape(
+          links[linksArr[i]].platformURL,
+          businessName,
+          result.sanitizedData,
+          prompts
+        );
+
+        if (listingDataFromOpenAi.error) {
+          throw new Error(listingDataFromOpenAi.error);
+        }
+
+        businessData.data.platformSummaries[`${platformName}Data`] = {
+          link: listingUrlData.data,
+          textContent: listingDataFromOpenAi.summary
+            ? listingDataFromOpenAi.summary
+            : result.sanitizedData,
+          highlights: listingDataFromOpenAi.highlights
+            ? listingDataFromOpenAi.highlights
+            : "",
+          images: result.uploadedImageLocations,
+        };
+      }
+    } catch (error) {
+      console.log(
+        `Something went wrong while scraping from ${platformName}: ${error.message}`
+          .red.inverse
+      );
+      businessData.errors.push(
+        `Error while scraping ${platformName}: ${error.message}`
+      );
+    }
+  }
+
+  console.log(JSON.stringify(businessData));
+  res.json({ businessData });
+});
+// @desc    Scrape platforms
+// @route   POST /api/data/scrape-platforms-2
+// @access  Public
+export const scrapePlatforms2 = asyncHandler(async (req, res) => {
+  // const businessData2 = regionalOverviewSampleData;
+  // res.json({ businessData: businessData2 });
+  // return;
+  const prompts = req.body.prompts;
+  const data = req.body.data;
+  const businessData = req.body.businessData;
+
+  const businessName = businessData.data.business_name;
+
+  const links = {
     atoll: { platformURL: "atolltravel.com", listingUrl: "" },
     surfHolidays: { platformURL: "surfholidays.com", listingUrl: "" },
     surfline: { platformURL: "surfline.com", listingUrl: "" },
