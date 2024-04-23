@@ -74,257 +74,305 @@ export const sampleData = {
     "99 Surf Lodge located at Playa Popoyo, Nicaragua, stands as a premier destination for those looking to combine the adventure of surfing with the comfort of a luxury holiday. Anchored in the heart of one of Central America's most celebrated surfing locales, this design boutique hotel provides a seamless blend of style, comfort, and surf culture. With its beachfront setting, 99 Surf Lodge offers an immediate connection to Nicaragua's vibrant coastal environment, ensuring that guests are never more than a stone's throw away from the ocean's call.\n\n**About Accommodation**  \n99 Surf Lodge offers air-conditioned accommodations ranging from apartment-style rooms with sea views to cozy ocean suites and double or twin rooms with either side sea views or outdoor views. Every room boasts amenities like free Wi-Fi, private bathrooms, and terraces or balconies that overlook the magnificent Pacific. The outdoor swimming pools and fitness center add a touch of luxury to the stay, making it perfect for those who wish to relax in style after a day of surfing.\n\n**Food & Inclusions**  \nCulinary experiences at 99 Surf Lodge cater to a wide range of tastes, featuring American, Australian, and Asian cuisines, with dietary options such as vegetarian, dairy-free, and vegan available. The on-site restaurant and Mesquite lounge by the oceanfront offer dining under the stars, creating memorable meals for guests. The highly-acclaimed location is not only favored for its surf but also for its dining, ensuring that food is an integral part of the stay.\n\n**Surfing and Surf Spots**  \nPopoyo, known for its consistent waves, is a magnet for surfers of all levels. The lodge offers a variety of surf-related activities including surfboard rentals, personalized coaching, and boat trips to nearby surf spots. For beginners, Beginner’s Bay provides an ideal setting for learning, while experienced surfers can challenge themselves in more advanced waves that the area offers, such as Playa Santana, a mere 10-minute walk away. Other spots like Playa Rosada and the renowned Popoyo reef break offer diverse conditions for every surfer's preferences.\n\n**Getting there**  \n99 Surf Lodge is situated conveniently, with the nearest airport, Augusto Cesar Sandino International Airport, being 60 miles away. The lodge facilitates travel through paid airport shuttle services, ensuring a smooth transition from the plane to the poolside or the surf. These transportation services offer a hassle-free start to what promises to be a memorable stay.\n\n**Facilities and Activities**  \nBeyond surfing, guests can enjoy horseback riding along the coastline, yoga classes designed to enhance wellness, and various massage techniques to relax the body after a full day of activities. The fitness center and the option of embarking on open water adventures through boat trips round off the offerings at 99 Surf Lodge, creating a holistic vacation experience that combines adventure with tranquility.\n\n**Frequently Asked Questions (FAQ)**  \n- **What types of accommodations are available?**  \nGuests can choose from a variety of room types including apartment-style with sea views, ocean suites, and double or twin rooms.\n  \n- **What dining options are offered?**  \nThe lodge offers a restaurant with American, Australian, and Asian cuisines, along with options for various dietary needs.\n\n- **Are there surf spots nearby for beginners?**  \nYes, Beginner’s Bay is perfect for new surfers, whereas surrounding spots like Playa Rosada and Playa Santana cater to more experienced surfers.\n\n- **How do I arrange airport transportation?**  \nThe lodge offers paid airport shuttle services which can be arranged directly through their booking platforms or contact information.\n\n- **What activities can I do apart from surfing?**  \nActivities include horseback riding, yoga, wellness massages, and boat trips for open water adventures.\n\nThe potent mix of luxury, comfort, and thrilling surf experiences at 99 Surf Lodge caters to surfers, travelers, and vacationers looking for an unforgettable stay in one of Nicaragua's most breathtaking surf destinations. Whether it's catching early morning waves or unwinding in luxurious accommodations, 99 Surf Lodge provides an encompassing experience that spells the essence of a perfect surf holiday.",
 };
 
-
 export const regionalOverviewSampleData = {
-  "errors": [],
-  "data": {
-      "contact_email": "info@maqai.com",
-      "phone_number": "+679 9907761",
-      "whatsapp_number": "",
-      "accomodation_type": "Resort, Cabin, Hostel",
-      "trip_type": "Family Holiday, Luxury Holiday, Learn to Surf",
-      "contact_name": "",
-      "location": "Qamea island just north of Taveuni, Fiji",
-      "summary": "Maqai Eco Resort offers an authentic Fiji Island holiday experience focusing on sustainability and adventure. Located on the pristine Qamea island, this resort offers a variety of accommodations from glamping to beachfront bures set among coconut palms with ocean views. It's an ideal destination for couples, families, and solo travellers looking for an 'off the beaten track' adventure. Some key features include the Sand Bar cafe/restaurant, an organic garden, solar power, yoga and Pilates classes, board hire and surf lessons, snorkeling tours, Fijian massage, and fishing trips. The resort also offers wedding packages and exclusive deals, promising a memorable stay.",
-      "name": "Maqai Beach Eco Surf Resort",
-      "platformSummaries": {
-          "bookingData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "tripData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "expediaData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "agodaData": {
-            "link": "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
-            "textContent": "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
-            "highlights": "",
-            "images": [
-                "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
-                "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
-                "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
-                "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
-                "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
-                "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
-                "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
-                "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg"
-            ]
-        },
-          "trivagoData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "perfectWaveData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "luexData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "waterWaysTravelData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "worldSurfarisData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "awaveData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "atollTravelData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "surfHolidaysData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "surflineData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "lushPalmData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "thermalTravelData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "bookSurfCampsData": {
-              "link": "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
-              "textContent": "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
-              "highlights": "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg"
-              ]
-          },
-          "nomadSurfersData": {
-              "link": "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
-              "textContent": "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
-              "highlights": "",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg"
-              ]
-          },
-          "stokedSurfAdventuresData": {
-              "link": "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
-              "textContent": "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
-              "highlights": "",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg"
-              ]
-          },
-          "soulSurfTravelData": {
-              "link": "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
-              "textContent": "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
-              "highlights": "",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg"
-              ]
-          },
-          "surfersHypeData": {
-              "link": "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
-              "textContent": "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
-              "highlights": "",
-              "images": [
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
-                  "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg"
-              ]
-          },
+  errors: [],
+  data: {
+    contact_email: "info@maqai.com",
+    phone_number: "+679 9907761",
+    whatsapp_number: "",
+    accomodation_type: "Resort, Cabin, Hostel",
+    trip_type: "Family Holiday, Luxury Holiday, Learn to Surf",
+    contact_name: "",
+    location: "Qamea island just north of Taveuni, Fiji",
+    summary:
+      "Maqai Eco Resort offers an authentic Fiji Island holiday experience focusing on sustainability and adventure. Located on the pristine Qamea island, this resort offers a variety of accommodations from glamping to beachfront bures set among coconut palms with ocean views. It's an ideal destination for couples, families, and solo travellers looking for an 'off the beaten track' adventure. Some key features include the Sand Bar cafe/restaurant, an organic garden, solar power, yoga and Pilates classes, board hire and surf lessons, snorkeling tours, Fijian massage, and fishing trips. The resort also offers wedding packages and exclusive deals, promising a memorable stay.",
+    business_name: "Maqai Beach Eco Surf Resort",
+    platformSummaries: {
+      bookingData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
       },
-      "slug": "`/undefined/undefined/undefined/undefined/undefined`",
-      "content": {
-          "overview": "Maqai Beach Eco Surf Resort on Qamea Island, Fiji, offers a sustainable island holiday tailored for families, luxury seekers, and those eager to learn surfing. Key features include a variety of accommodation types, a Sand Bar cafe/restaurant, and a range of activities including surf lessons, snorkeling tours, and yoga classes. This resort is powered by solar energy and emphasizes organic gardening, providing a balance of adventure and eco-conscious living.",
-          "aboutAccomodation": "Accommodations at the resort range from glamping sites to traditional Fijian bungalows, known as bures. These beachfront bures are equipped with private bathrooms, patios overlooking the ocean, and amenities designed for comfort and convenience such as air conditioning, mosquito nets, and room service. Each unit is set among coconut palms, offering ocean views. The accommodations can host various group sizes, with options available for couples, families, and solo travelers.",
-          "foodInclusions": "Dining at the resort reflects the local Fijian cuisine with an emphasis on organic produce from the garden and local seafood. The on-site restaurant offers continental and cooked breakfast options, with a daily set menu for lunch and dinner. Special dietary needs, such as vegetarian, vegan, and gluten-free diets, are accommodated upon request. Guests can enjoy fresh, local ingredients, ensuring a delightful and nourishing dining experience.",
-          "specificSurfSpots": "The resort is renowned for its proximal access to excellent surf breaks directly in front, offering challenges for both beginners and seasoned surfers alike. Board hire and surf lessons are readily available for guests wishing to improve their skills or tackle the waves for the first time. The Qamea island and surrounding areas are home to various surf spots suitable for all levels, promising an exhilarating surfing adventure.",
-          "gettingThere": "Reaching Maqai Beach Eco Surf Resort involves flying into Nadi International Airport, followed by a domestic flight to Taveuni. From Taveuni, a boat transfer will bring guests directly to the resort on Qamea Island. Transfer and pick-up times align with domestic flight schedules to ensure smooth transitions for guests from their point of arrival to the resort.",
-          "faq": [
-              {
-                  "question": "Is alcohol available at the resort?",
-                  "answer": "Yes, alcohol is available for purchase at the resort's Sand Bar cafe/restaurant."
-              },
-              {
-                  "question": "What surfing levels does the resort cater to?",
-                  "answer": "The resort provides surf lessons and board hire suitable for all levels, from beginners to advanced surfers."
-              },
-              {
-                  "question": "Are there any activities for non-surfers?",
-                  "answer": "Yes, non-surfing guests can enjoy snorkeling tours, yoga and Pilates classes, Fijian massage, and fishing trips."
-              },
-              {
-                  "question": "Can the resort accommodate special dietary needs?",
-                  "answer": "Yes, the resort accommodates special dietary requirements, including vegetarian, vegan, and gluten-free options, with prior notice."
-              },
-              {
-                  "question": "How environmentally friendly is the resort?",
-                  "answer": "The resort operates on solar power, has an organic garden, and emphasizes other sustainable practices to minimize its environmental footprint."
-              },
-              {
-                  "question": "Is there WiFi available?",
-                  "answer": "Yes, WiFi is available in certain areas of the resort, allowing guests to stay connected."
-              },
-              {
-                  "question": "How does one travel between the islands?",
-                  "answer": "Travel between the islands is facilitated by boat transfers, which can be arranged by the resort."
-              },
-              {
-                  "question": "What is included in the compulsory daily meal plan?",
-                  "answer": "The compulsory daily meal plan includes breakfast, lunch, and dinner, featuring a variety of fresh, local dishes prepared daily."
-              }
-          ]
-      }
-  }
-}
+      tripData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      expediaData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      agodaData: {
+        link: "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
+        textContent:
+          "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
+        highlights: "",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg",
+        ],
+      },
+      trivagoData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      perfectWaveData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      luexData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      waterWaysTravelData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      worldSurfarisData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      awaveData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      atollTravelData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      surfHolidaysData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      surflineData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      lushPalmData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      thermalTravelData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      bookSurfCampsData: {
+        link: "https://www.booking.com/hotel/fj/maqai-beach-eco-resort.html",
+        textContent:
+          "Maqai Beach Eco Resort is a solar-powered eco resort located on Qamea Island, offering guests a unique blend of adventure and relaxation amidst tropical mountains, rainforest, and white sand beaches. Known for its excellent surfing breaks right in front, the resort provides a variety of activities including diving, fishing, hiking, and non-motorized water sports. Accommodations are provided in traditional bungalows with private bathrooms and patios overlooking the ocean, ensuring a tranquil and immersive experience. The on-site restaurant serves continental and cooked breakfasts, with a daily set menu for lunch and dinner utilizing fresh, local ingredients such as fish, organic garden produce, and items from the local farmer's market. A compulsory daily meal plan is available to guests, ensuring a complete and satisfying dining experience throughout their stay.",
+        highlights:
+          "Beachfront, Private Beach, Airport shuttle, Non-smoking rooms, Room service, Restaurant, Spa, Family rooms, Bar, Private beach area",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762301042_image.jpg",
+        ],
+      },
+      nomadSurfersData: {
+        link: "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
+        textContent:
+          "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
+        highlights: "",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg",
+        ],
+      },
+      stokedSurfAdventuresData: {
+        link: "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
+        textContent:
+          "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
+        highlights: "",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg",
+        ],
+      },
+      soulSurfTravelData: {
+        link: "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
+        textContent:
+          "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
+        highlights: "",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg",
+        ],
+      },
+      surfersHypeData: {
+        link: "https://www.agoda.com/maqai-beach-eco-resort-all-inclusive/hotel/taveuni-fj.html",
+        textContent:
+          "Maqai Beach Eco Resort, conveniently located in the Qamea part of Taveuni, Fiji, provides a serene and eco-friendly retreat for travelers. The resort, situated 12 km from the city center, is close to Matei Airport and offers facilities such as airport transfers, a spa, private beach, beachfront setting, and a game room, ensuring a convenient and enjoyable stay. With room options ranging from Superior Double Rooms to Family Bungalows and Beachfront Twin Rooms, the resort caters to various preferences and offers views of the beach. Accommodations are equipped with amenities like balconies or terraces, seating areas, and showers. Maqai Beach Eco Resort promotes a tranquility-focused atmosphere, only allowing children under certain conditions and possibly with additional charges. Established in 2008, this 2-star resort has 10 well-appointed rooms offering a blend of modern comforts and traditional Fijian architecture. The resort prides itself on its cleanliness, with a rating of 9.3, and offers a unique and authentic experience amidst Fiji's natural beauty. The property received positive customer reviews for its value, facilities, dining options, and staff performance, with an overall excellent rating.",
+        highlights: "",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762342583_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762346293_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762349915_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762357141_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762366802_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762370423_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762374017_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/maqai-beach-eco-surf-resort/1713762377774_image.jpg",
+        ],
+      },
+    },
+    slug: "`/undefined/undefined/undefined/undefined/undefined`",
+    content: {
+      overview:
+        "Maqai Beach Eco Surf Resort on Qamea Island, Fiji, offers a sustainable island holiday tailored for families, luxury seekers, and those eager to learn surfing. Key features include a variety of accommodation types, a Sand Bar cafe/restaurant, and a range of activities including surf lessons, snorkeling tours, and yoga classes. This resort is powered by solar energy and emphasizes organic gardening, providing a balance of adventure and eco-conscious living.",
+      aboutAccomodation:
+        "Accommodations at the resort range from glamping sites to traditional Fijian bungalows, known as bures. These beachfront bures are equipped with private bathrooms, patios overlooking the ocean, and amenities designed for comfort and convenience such as air conditioning, mosquito nets, and room service. Each unit is set among coconut palms, offering ocean views. The accommodations can host various group sizes, with options available for couples, families, and solo travelers.",
+      foodInclusions:
+        "Dining at the resort reflects the local Fijian cuisine with an emphasis on organic produce from the garden and local seafood. The on-site restaurant offers continental and cooked breakfast options, with a daily set menu for lunch and dinner. Special dietary needs, such as vegetarian, vegan, and gluten-free diets, are accommodated upon request. Guests can enjoy fresh, local ingredients, ensuring a delightful and nourishing dining experience.",
+      specificSurfSpots:
+        "The resort is renowned for its proximal access to excellent surf breaks directly in front, offering challenges for both beginners and seasoned surfers alike. Board hire and surf lessons are readily available for guests wishing to improve their skills or tackle the waves for the first time. The Qamea island and surrounding areas are home to various surf spots suitable for all levels, promising an exhilarating surfing adventure.",
+      gettingThere:
+        "Reaching Maqai Beach Eco Surf Resort involves flying into Nadi International Airport, followed by a domestic flight to Taveuni. From Taveuni, a boat transfer will bring guests directly to the resort on Qamea Island. Transfer and pick-up times align with domestic flight schedules to ensure smooth transitions for guests from their point of arrival to the resort.",
+      faq: [
+        {
+          question: "Is alcohol available at the resort?",
+          answer:
+            "Yes, alcohol is available for purchase at the resort's Sand Bar cafe/restaurant.",
+        },
+        {
+          question: "What surfing levels does the resort cater to?",
+          answer:
+            "The resort provides surf lessons and board hire suitable for all levels, from beginners to advanced surfers.",
+        },
+        {
+          question: "Are there any activities for non-surfers?",
+          answer:
+            "Yes, non-surfing guests can enjoy snorkeling tours, yoga and Pilates classes, Fijian massage, and fishing trips.",
+        },
+        {
+          question: "Can the resort accommodate special dietary needs?",
+          answer:
+            "Yes, the resort accommodates special dietary requirements, including vegetarian, vegan, and gluten-free options, with prior notice.",
+        },
+        {
+          question: "How environmentally friendly is the resort?",
+          answer:
+            "The resort operates on solar power, has an organic garden, and emphasizes other sustainable practices to minimize its environmental footprint.",
+        },
+        {
+          question: "Is there WiFi available?",
+          answer:
+            "Yes, WiFi is available in certain areas of the resort, allowing guests to stay connected.",
+        },
+        {
+          question: "How does one travel between the islands?",
+          answer:
+            "Travel between the islands is facilitated by boat transfers, which can be arranged by the resort.",
+        },
+        {
+          question: "What is included in the compulsory daily meal plan?",
+          answer:
+            "The compulsory daily meal plan includes breakfast, lunch, and dinner, featuring a variety of fresh, local dishes prepared daily.",
+        },
+      ],
+    },
+  },
+};

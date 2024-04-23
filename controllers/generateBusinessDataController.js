@@ -911,7 +911,7 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
 
   // 3. Build Business Slug for yeeew:
   const slug = await slugBuilder(
-    businessData.data.name,
+    businessData.data.business_name,
     businessData.data.location,
     prompts.slugBuilderPrompt
   );
@@ -934,13 +934,12 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
 // @route   POST /api/data/scrape-site
 // @access  Public
 export const scrapeBusinessSite = asyncHandler(async (req, res) => {
-  const businessData2 = regionalOverviewSampleData;
-  res.json({ businessData: businessData2 });
-  return;
+  // const businessData2 = regionalOverviewSampleData;
+  // res.json({ businessData: businessData2 });
+  // return;
   const prompts = req.body.prompts;
   const data = req.body.data;
 
-  const businessName = data[0];
   const businessLink = data[1];
 
   //Generating Data:
@@ -962,12 +961,14 @@ export const scrapeBusinessSite = asyncHandler(async (req, res) => {
 // @route   POST /api/data/scrape-platforms
 // @access  Public
 export const scrapePlatforms = asyncHandler(async (req, res) => {
-  const businessData2 = regionalOverviewSampleData;
-  res.json({ businessData: businessData2 });
-  return;
+  // const businessData2 = regionalOverviewSampleData;
+  // res.json({ businessData: businessData2 });
+  // return;
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
+
+  const businessName = businessData.data.business_name;
 
   businessData.data.platformSummaries = {};
 
@@ -1059,16 +1060,16 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
 // @route   POST /api/data/slug-build
 // @access  Public
 export const buildBusinessSlug = asyncHandler(async (req, res) => {
-  const businessData2 = regionalOverviewSampleData;
-  res.json({ businessData: businessData2 });
-  return;
+  // const businessData2 = regionalOverviewSampleData;
+  // res.json({ businessData: businessData2 });
+  // return;
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
 
   // 3. Build Business Slug for yeeew:
   const slug = await slugBuilder(
-    businessData.data.name,
+    businessData.data.business_name,
     businessData.data.location,
     prompts.slugBuilderPrompt
   );
@@ -1082,9 +1083,9 @@ export const buildBusinessSlug = asyncHandler(async (req, res) => {
 // @route   POST /api/data/content-generation
 // @access  Public
 export const generateFinalContent = asyncHandler(async (req, res) => {
-  const businessData2 = regionalOverviewSampleData;
-  res.json({ businessData: businessData2 });
-  return;
+  // const businessData2 = regionalOverviewSampleData;
+  // res.json({ businessData: businessData2 });
+  // return;
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
