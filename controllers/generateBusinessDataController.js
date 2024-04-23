@@ -8,7 +8,7 @@ import listingScrape from "../utils/listingScrape.js";
 
 import asyncHandler from "express-async-handler";
 
-import { sampleData,regionalOverviewSampleData } from "../constants.js";
+import { sampleData, regionalOverviewSampleData } from "../constants.js";
 
 // @desc    Generate Business Data
 // @route   POST /api/data
@@ -847,7 +847,10 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
     thermalTravel: { platformURL: "thermal.travel", listingUrl: "" },
     bookSurfCamps: { platformURL: "booksurfcamps.com", listingUrl: "" },
     nomadSurfers: { platformURL: "nomadsurfers.com", listingUrl: "" },
-    stokedSurfAdventrues: { platformURL: "stokedsurfadventures.com", listingUrl: "" },
+    stokedSurfAdventrues: {
+      platformURL: "stokedsurfadventures.com",
+      listingUrl: "",
+    },
     soulSurfTravel: { platformURL: "soulsurftravel.com.au", listingUrl: "" },
     surfersHype: { platformURL: "surfershype.com", listingUrl: "" },
   };
@@ -855,14 +858,17 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
   const linksArr = Object.keys(links);
 
   for (var i = 0; i < linksArr.length; i++) {
-  // for (var i = 0; i < 2; i++) {
+    // for (var i = 0; i < 2; i++) {
     const platformName = linksArr[i];
     const platformURL = links[linksArr[i]].platformURL;
-    try{
-      const listingUrlData = await findListingOnGoogle(businessName, platformURL);
-      if(listingUrlData.data){
-          //Scrape Pages from platforms
-        links[linksArr[i]].listingUrl = listingUrlData.data
+    try {
+      const listingUrlData = await findListingOnGoogle(
+        businessName,
+        platformURL
+      );
+      if (listingUrlData.data) {
+        //Scrape Pages from platforms
+        links[linksArr[i]].listingUrl = listingUrlData.data;
         const result = await puppeteerLoadFetch(
           listingUrlData.data,
           true,
@@ -877,10 +883,10 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
           prompts
         );
 
-        if(listingDataFromOpenAi.error){
-          throw new Error(listingDataFromOpenAi.error)
+        if (listingDataFromOpenAi.error) {
+          throw new Error(listingDataFromOpenAi.error);
         }
-  
+
         businessData.data.platformSummaries[`${platformName}Data`] = {
           link: listingUrlData.data,
           textContent: listingDataFromOpenAi.summary
@@ -892,8 +898,11 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
           images: result.uploadedImageLocations,
         };
       }
-    }catch(error){
-      console.log(`Something went wrong while scraping from ${platformName}: ${error.message}`.red.inverse);
+    } catch (error) {
+      console.log(
+        `Something went wrong while scraping from ${platformName}: ${error.message}`
+          .red.inverse
+      );
       businessData.errors.push(
         `Error while scraping ${platformName}: ${error.message}`
       );
@@ -907,6 +916,178 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
     prompts.slugBuilderPrompt
   );
   businessData.data.slug = slug;
+
+  // 4. Generate content
+  const content = await generateSEOContentWithGoogle(
+    businessData,
+    prompts.contentGenerationPromptWithJson,
+    true
+  );
+
+  businessData.data.content = JSON.parse(content);
+
+  console.log(JSON.stringify(businessData));
+  res.json({ businessData });
+});
+
+// @desc    Scrape Business main site for data
+// @route   POST /api/data/scrape-site
+// @access  Public
+export const scrapeBusinessSite = asyncHandler(async (req, res) => {
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
+  const prompts = req.body.prompts;
+  const data = req.body.data;
+
+  const businessName = data[0];
+  const businessLink = data[1];
+
+  //Generating Data:
+  let businessData = { errors: [], data: {} };
+
+  // 1. Scrape Business Data using Two Way communication:
+  try {
+    businessData.data = await twoWayComm(businessLink, prompts);
+  } catch (e) {
+    businessData.errors.push("Main Site not working");
+    console.log("Main Site not working".red);
+  }
+
+  console.log(JSON.stringify(businessData));
+  res.json({ businessData });
+});
+
+// @desc    Scrape platforms
+// @route   POST /api/data/scrape-platforms
+// @access  Public
+export const scrapePlatforms = asyncHandler(async (req, res) => {
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
+  const prompts = req.body.prompts;
+  const data = req.body.data;
+  const businessData = req.body.businessData;
+
+  businessData.data.platformSummaries = {};
+
+  const links = {
+    booking: { platformURL: "Booking.com", listingUrl: "" },
+    agoda: { platformURL: "agoda.com", listingUrl: "" },
+    trip: { platformURL: "Trip.com", listingUrl: "" },
+    expedia: { platformURL: "expedia.com", listingUrl: "" },
+    trivago: { platformURL: "Trivago.com", listingUrl: "" },
+    perfectWave: { platformURL: "perfectwavetravel.com", listingUrl: "" },
+    luex: { platformURL: "luex.com", listingUrl: "" },
+    waterwaysSurf: { platformURL: "waterwaystravel.com", listingUrl: "" },
+    worldSafaris: { platformURL: "worldsurfaris.com", listingUrl: "" },
+    awave: { platformURL: "awave.com.au", listingUrl: "" },
+    atoll: { platformURL: "atolltravel.com", listingUrl: "" },
+    surfHolidays: { platformURL: "surfholidays.com", listingUrl: "" },
+    surfline: { platformURL: "surfline.com", listingUrl: "" },
+    lushPalm: { platformURL: "", listingUrl: "lushpalm.com" },
+    thermalTravel: { platformURL: "thermal.travel", listingUrl: "" },
+    bookSurfCamps: { platformURL: "booksurfcamps.com", listingUrl: "" },
+    nomadSurfers: { platformURL: "nomadsurfers.com", listingUrl: "" },
+    stokedSurfAdventrues: {
+      platformURL: "stokedsurfadventures.com",
+      listingUrl: "",
+    },
+    soulSurfTravel: { platformURL: "soulsurftravel.com.au", listingUrl: "" },
+    surfersHype: { platformURL: "surfershype.com", listingUrl: "" },
+  };
+
+  const linksArr = Object.keys(links);
+
+  for (var i = 0; i < linksArr.length; i++) {
+    // for (var i = 0; i < 2; i++) {
+    const platformName = linksArr[i];
+    const platformURL = links[linksArr[i]].platformURL;
+    try {
+      const listingUrlData = await findListingOnGoogle(
+        businessName,
+        platformURL
+      );
+      if (listingUrlData.data) {
+        //Scrape Pages from platforms
+        links[linksArr[i]].listingUrl = listingUrlData.data;
+        const result = await puppeteerLoadFetch(
+          listingUrlData.data,
+          true,
+          true,
+          generateSlug(businessName),
+          true
+        );
+        const listingDataFromOpenAi = await listingScrape(
+          links[linksArr[i]].platformURL,
+          businessName,
+          result.sanitizedData,
+          prompts
+        );
+
+        if (listingDataFromOpenAi.error) {
+          throw new Error(listingDataFromOpenAi.error);
+        }
+
+        businessData.data.platformSummaries[`${platformName}Data`] = {
+          link: listingUrlData.data,
+          textContent: listingDataFromOpenAi.summary
+            ? listingDataFromOpenAi.summary
+            : result.sanitizedData,
+          highlights: listingDataFromOpenAi.highlights
+            ? listingDataFromOpenAi.highlights
+            : "",
+          images: result.uploadedImageLocations,
+        };
+      }
+    } catch (error) {
+      console.log(
+        `Something went wrong while scraping from ${platformName}: ${error.message}`
+          .red.inverse
+      );
+      businessData.errors.push(
+        `Error while scraping ${platformName}: ${error.message}`
+      );
+    }
+  }
+
+  console.log(JSON.stringify(businessData));
+  res.json({ businessData });
+});
+
+// @desc    Build Slug
+// @route   POST /api/data/slug-build
+// @access  Public
+export const buildBusinessSlug = asyncHandler(async (req, res) => {
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
+  const prompts = req.body.prompts;
+  const data = req.body.data;
+  const businessData = req.body.businessData;
+
+  // 3. Build Business Slug for yeeew:
+  const slug = await slugBuilder(
+    businessData.data.name,
+    businessData.data.location,
+    prompts.slugBuilderPrompt
+  );
+  businessData.data.slug = slug;
+
+  console.log(JSON.stringify(businessData));
+  res.json({ businessData });
+});
+
+// @desc    Generate Final Content
+// @route   POST /api/data/content-generation
+// @access  Public
+export const generateFinalContent = asyncHandler(async (req, res) => {
+  const businessData2 = regionalOverviewSampleData;
+  res.json({ businessData: businessData2 });
+  return;
+  const prompts = req.body.prompts;
+  const data = req.body.data;
+  const businessData = req.body.businessData;
 
   // 4. Generate content
   const content = await generateSEOContentWithGoogle(
