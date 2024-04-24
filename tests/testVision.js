@@ -1,33 +1,54 @@
-// Import the axios library
-import axios from "axios";
+import vision from "@google-cloud/vision";
+import fs from "fs";
+import request from "request";
+import { categorizationLabels } from "../constants.js";
 
-// Define your API key
-const apiKey = "AIzaSyAay3qv5mTLHKE9y52Ut6vlpU7VF1sMf78"; // Replace 'YOUR_API_KEY_HERE' with your actual API key
-
-// Define the request body
-const requestBody = {
-  requests: [
-    {
-      // Define your AnnotateImageRequest object here
-      // For example:
-      image: { source: { imageUri: "https://picsum.photos/500" } },
-      features: [{ type: "LABEL_DETECTION" }, { type: "TEXT_DETECTION" }],
-    },
-  ],
+const downloadImgToLocal = function (url, fileName, callback) {
+  request.head(url, function (err, res, body) {
+    request(url).pipe(fs.createWriteStream(fileName)).on("close", callback);
+  });
 };
 
-// Make the HTTP request
-axios
-  .post(
-    `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`,
-    requestBody
-  )
-  .then((response) => {
-    console.log(response.data);
-  })
-  .catch((error) => {
-    console.error(
-      "Error:",
-      error.response ? error.response.data : error.message
-    );
+const deleteImgFromLocal = async function (filePath) {
+  fs.unlink(filePath, (err) => {
+    if (err) throw err;
+    console.log("path/file.txt was deleted");
   });
+};
+
+async function quickstart() {
+  const filePath = `./tests/file_${new Date().getTime()}.png`;
+  downloadImgToLocal(
+    "https://www.google.com/images/srpr/logo3w.png",
+    filePath,
+    async function () {
+      console.log("done");
+      const label = await getLabel(filePath);
+      await deleteImgFromLocal(filePath);
+    }
+  );
+}
+
+const getLabel = async (filePath) => {
+  const client = new vision.ImageAnnotatorClient({
+    keyFilename: "./tests/cloudVisionkey.json",
+  });
+  const [result] = await client.labelDetection(filePath);
+  const imageLabels = result.labelAnnotations;
+
+  const label = imageLabels.find((label) => {
+    let foundLabel;
+    Object.keys(categorizationLabels).forEach((key) => {
+      if (!foundLabel)
+        foundLabel = categorizationLabels[key].find(
+          (l) => l.toLowerCase() === label.description.toLowerCase()
+        );
+    });
+    return foundLabel;
+  });
+
+  const returningLabel = label ? label.description.toLowerCase() : "others";
+  return returningLabel;
+};
+
+quickstart();

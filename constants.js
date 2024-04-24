@@ -200,3 +200,16 @@ export const regionalOverviewSampleData = {
     },
   },
 };
+
+export const categorizationLabels = {
+  food: ["food"],
+  landscape: ["beach", "sky", "landscape"],
+  accomodation: [
+    "furniture",
+    "interior design",
+    "bed frame",
+    "bed",
+    "pillow",
+    "bedding",
+  ],
+};
