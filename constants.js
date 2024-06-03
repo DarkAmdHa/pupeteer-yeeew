@@ -212,4 +212,5 @@ export const categorizationLabels = {
     "pillow",
     "bedding",
   ],
+  
 };

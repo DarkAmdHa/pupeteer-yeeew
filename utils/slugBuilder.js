@@ -14,7 +14,7 @@ const slugBuilder = async (businessName, location, prompt) => {
     ];
     var data = {
       messages: messages,
-      model: "gpt-4-turbo-preview",
+      model: "gpt-4o",
     };
 
     var response = await fetch("https://api.openai.com/v1/chat/completions", {

@@ -4,7 +4,7 @@ const openAiWithPrompts = async (messages) => {
     var data = {
       messages: messages,
       // model: "gpt-4-turbo-preview",
-      model: "gpt-4-turbo-preview",
+      model: "gpt-4o",
       response_format: { type: "json_object" },
     };
 

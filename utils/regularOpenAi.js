@@ -27,7 +27,7 @@ const regularOpenAi = async (link, prompt, returnAsJson = false) => {
     var data = {
       messages: messages,
       // model: "gpt-4-turbo-preview",
-      model: "gpt-4-turbo-preview",
+      model: "gpt-4o",
     };
 
     if (returnAsJson) data["response_format"] = { type: "json_object" };
