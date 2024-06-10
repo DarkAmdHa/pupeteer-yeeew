@@ -4,9 +4,9 @@
 export default async function scrapeImages(page) {
   const images = await page.evaluate(() => {
     const imagesArray = [];
-    document.querySelectorAll("img").forEach((image) => {
-      if (image.naturalWidth >= 800) {
-        // Check image size
+    document.querySelectorAll("img").forEach((image, index) => {
+      if (image.naturalWidth >= 1200 && index <= 20) {
+        // Check image sizer
         imagesArray.push(image.src);
       }
     });
