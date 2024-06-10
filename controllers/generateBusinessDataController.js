@@ -1167,11 +1167,17 @@ export const locateBusiness = asyncHandler(async (req, res) => {
   // Google Maps Geocoding API endpoint
 
   const locations = await fetchGeocodeData(businessData.data.location);
+  let lat, lng;
   if (locations.results.length) {
     //Select the first as most likely
     const coordinates = locations.results[0];
-    businessData.data.coordinates = coordinates.geometry.location;
+    lat = coordinates.geometry.location.lat;
+    lng = coordinates.geometry.location.lng;
   }
+  businessData.data.coordinates = {
+    lat: lat ? lat : 0,
+    lng: lng ? lng : 0,
+  };
 
   res.json({ businessData });
 });
