@@ -9,6 +9,7 @@ import listingScrape from "../utils/listingScrape.js";
 import asyncHandler from "express-async-handler";
 
 import { sampleData, regionalOverviewSampleData } from "../constants.js";
+import fetchGeocodeData from "../utils/geoLocate.js";
 
 // @desc    Generate Business Data
 // @route   POST /api/data
@@ -911,7 +912,7 @@ export const runRegionalHandler = asyncHandler(async (req, res) => {
 
   // 3. Build Business Slug for yeeew:
   const slug = await slugBuilder(
-    businessData.data.business_name,
+    data[0],
     businessData.data.location,
     prompts.slugBuilderPrompt
   );
@@ -968,7 +969,7 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
   const data = req.body.data;
   const businessData = req.body.businessData;
 
-  const businessName = businessData.data.business_name;
+  const businessName = data[0];
 
   businessData.data.platformSummaries = {};
 
@@ -988,7 +989,7 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
   const linksArr = Object.keys(links);
 
   for (var i = 0; i < linksArr.length; i++) {
-    // for (var i = 0; i < 2; i++) {
+    // for (var i = 0; i < 0; i++) {
     const platformName = linksArr[i];
     const platformURL = links[linksArr[i]].platformURL;
     try {
@@ -1053,7 +1054,7 @@ export const scrapePlatforms2 = asyncHandler(async (req, res) => {
   const data = req.body.data;
   const businessData = req.body.businessData;
 
-  const businessName = businessData.data.business_name;
+  const businessName = data[0];
 
   const links = {
     atoll: { platformURL: "atolltravel.com", listingUrl: "" },
@@ -1074,7 +1075,7 @@ export const scrapePlatforms2 = asyncHandler(async (req, res) => {
   const linksArr = Object.keys(links);
 
   for (var i = 0; i < linksArr.length; i++) {
-    // for (var i = 0; i < 2; i++) {
+    // for (var i = 0; i < 0; i++) {
     const platformName = linksArr[i];
     const platformURL = links[linksArr[i]].platformURL;
     try {
@@ -1142,13 +1143,36 @@ export const buildBusinessSlug = asyncHandler(async (req, res) => {
 
   // 3. Build Business Slug for yeeew:
   const slug = await slugBuilder(
-    businessData.data.business_name,
+    data[0],
     businessData.data.location,
     prompts.slugBuilderPrompt
   );
   businessData.data.slug = slug;
 
   console.log(JSON.stringify(businessData));
+  res.json({ businessData });
+});
+
+// @desc    Build Slug
+// @route   POST /api/data/geolocate
+// @access  Public
+export const locateBusiness = asyncHandler(async (req, res) => {
+  // const businessData2 = regionalOverviewSampleData;
+  // res.json({ businessData: businessData2 });
+  // return;
+  const businessData = req.body.businessData;
+
+  if (!businessData.data.location) res.json({ businessData });
+
+  // Google Maps Geocoding API endpoint
+
+  const locations = await fetchGeocodeData(businessData.data.location);
+  if (locations.results.length) {
+    //Select the first as most likely
+    const coordinates = locations.results[0];
+    businessData.data.coordinates = coordinates.geometry.location;
+  }
+
   res.json({ businessData });
 });
 
@@ -1169,8 +1193,18 @@ export const generateFinalContent = asyncHandler(async (req, res) => {
     prompts.contentGenerationPromptWithJson,
     true
   );
+  const parsedContent = JSON.parse(content);
+  if (parsedContent.accomodation_type) {
+    businessData.data.accomodation_type = parsedContent.accomodation_type;
+  }
+  if (parsedContent.trip_type) {
+    businessData.data.trip_type = parsedContent.trip_type;
+  }
+  if (parsedContent.location) {
+    businessData.data.location = parsedContent.location;
+  }
 
-  businessData.data.content = JSON.parse(content);
+  businessData.data.content = parsedContent;
 
   console.log(JSON.stringify(businessData));
   res.json({ businessData });

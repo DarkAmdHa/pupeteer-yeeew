@@ -9,7 +9,7 @@ const generateSEOContentWithGoogle = async (
 ) => {
   //Get relevant google data:
   const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(
-    data.location + " " + "yeeew.com"
+    data.data.location + " " + "yeeew.com"
   )}`;
   const links = await fetchRelevantGoogleLinks(googleUrl, 4);
 

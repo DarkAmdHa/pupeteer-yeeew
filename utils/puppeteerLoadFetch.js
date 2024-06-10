@@ -19,7 +19,7 @@ const puppeteerLoadFetch = async (
 
   if (dynamic) {
     // Wait for 5 seconds before scraping:
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    await new Promise((resolve) => setTimeout(resolve, 2500));
   }
   let sanitizedData;
   let uploadedImageLocations = [];
