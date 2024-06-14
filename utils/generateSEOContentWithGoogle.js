@@ -17,12 +17,16 @@ const generateSEOContentWithGoogle = async (
   const relevantLinks = [];
   for (let i = 0; i < links.length; i++) {
     // const linkData = await regularFetch(links[i]);
-    const result = await puppeteerLoadFetch(links[i], true);
-    const linkData = result.sanitizedData;
-    relevantLinks.push({
-      link: links[i],
-      linkHTML: linkData,
-    });
+    try {
+      const result = await puppeteerLoadFetch(links[i], true);
+      const linkData = result.sanitizedData;
+      relevantLinks.push({
+        link: links[i],
+        linkHTML: linkData,
+      });
+    } catch (error) {
+      console.log(`Error while accessing ${links[i]} : ${error}`);
+    }
   }
 
   //This prompt needs to be filled with data:
