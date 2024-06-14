@@ -5,12 +5,20 @@ import regularOpenAi from "./regularOpenAi.js";
 const generateSEOContentWithGoogle = async (
   data,
   prompt,
-  returnAsJson = false
+  returnAsJson = false,
+  businessName
 ) => {
   //Get relevant google data:
-  const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(
-    data.data.business_name + " " + "site:yeeew.com"
-  )}`;
+  let googleUrl;
+  if (businessName) {
+    googleUrl = `https://www.google.com/search?q=${encodeURIComponent(
+      businessName + " " + "site:yeeew.com"
+    )}`;
+  } else {
+    googleUrl = `https://www.google.com/search?q=${encodeURIComponent(
+      data.data.location + " " + "site:yeeew.com"
+    )}`;
+  }
   const links = await fetchRelevantGoogleLinks(googleUrl, 4);
 
   //Fetch each link:

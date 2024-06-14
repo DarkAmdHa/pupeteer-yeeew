@@ -1192,12 +1192,13 @@ export const generateFinalContent = asyncHandler(async (req, res) => {
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
-
+  const businessName = data[0];
   // 4. Generate content
   const content = await generateSEOContentWithGoogle(
     businessData,
     prompts.contentGenerationPromptWithJson,
-    true
+    true,
+    businessName
   );
   debugger;
   // const parsedContent = {
