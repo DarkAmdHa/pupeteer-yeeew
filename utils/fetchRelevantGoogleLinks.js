@@ -8,8 +8,9 @@ const fetchRelevantGoogleLinks = async (link, max) => {
 
   await page.goto(link);
 
-  const links = await page.$$eval(`a[href^="https://www.yeeew.com/"]`, (as) =>
-    as.map((a) => a.href)
+  const links = await page.$$eval(
+    `a[href^="https://www.yeeew.com/listing"]`,
+    (as) => as.map((a) => a.href)
   );
   await browser.close();
 
