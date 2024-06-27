@@ -1002,8 +1002,8 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
 
   const linksArr = Object.keys(links);
 
-  // for (var i = 0; i < linksArr.length; i++) {
-  for (var i = 0; i < 1; i++) {
+  for (var i = 0; i < linksArr.length; i++) {
+    // for (var i = 0; i < 1; i++) {
     const platformName = linksArr[i];
     const platformURL = links[linksArr[i]].platformURL;
     try {
@@ -1103,8 +1103,8 @@ export const scrapePlatforms2 = asyncHandler(async (req, res) => {
 
   const linksArr = Object.keys(links);
 
-  // for (var i = 0; i < linksArr.length; i++) {
-  for (var i = 0; i < 0; i++) {
+  for (var i = 0; i < linksArr.length; i++) {
+    // for (var i = 0; i < 0; i++) {
     const platformName = linksArr[i];
     const platformURL = links[linksArr[i]].platformURL;
     try {
