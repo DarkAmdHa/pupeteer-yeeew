@@ -8,7 +8,11 @@ import listingScrape from "../utils/listingScrape.js";
 
 import asyncHandler from "express-async-handler";
 
-import { sampleData, regionalOverviewSampleData } from "../constants.js";
+import {
+  sampleData,
+  regionalOverviewSampleData,
+  finalData,
+} from "../constants.js";
 import fetchGeocodeData from "../utils/geoLocate.js";
 
 // @desc    Generate Business Data
@@ -88,10 +92,13 @@ export const generateBusinessDataHandler = asyncHandler(async (req, res) => {
     const result = await puppeteerLoadFetch(
       bookingPage.data,
       true,
-      true,
+      scrapeImages,
       generateSlug(businessName),
-      true
+      true,
+      "booking"
     );
+
+    scrapeImages = false;
 
     const listingDataFromOpenAi = await listingScrape(
       "Booking.com",
@@ -109,6 +116,13 @@ export const generateBusinessDataHandler = asyncHandler(async (req, res) => {
         ? listingDataFromOpenAi.highlights
         : "",
       images: result.uploadedImageLocations,
+      rooms: listingDataFromOpenAi.rooms ? listingDataFromOpenAi.rooms : [],
+      surroundings: listingDataFromOpenAi.surroundings
+        ? listingDataFromOpenAi.surroundings
+        : [],
+      amenities: listingDataFromOpenAi.amenities
+        ? listingDataFromOpenAi.amenities
+        : [],
     };
   }
   if (agodaPage.data) {
@@ -970,7 +984,7 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
   const businessData = req.body.businessData;
 
   const businessName = data[0];
-
+  businessData.data.scrapeImages = true;
   businessData.data.platformSummaries = {};
 
   const links = {
@@ -988,8 +1002,8 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
 
   const linksArr = Object.keys(links);
 
-  for (var i = 0; i < linksArr.length; i++) {
-    // for (var i = 0; i < 0; i++) {
+  // for (var i = 0; i < linksArr.length; i++) {
+  for (var i = 0; i < 1; i++) {
     const platformName = linksArr[i];
     const platformURL = links[linksArr[i]].platformURL;
     try {
@@ -997,16 +1011,24 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
         businessName,
         platformURL
       );
+
       if (listingUrlData.data) {
         //Scrape Pages from platforms
         links[linksArr[i]].listingUrl = listingUrlData.data;
         const result = await puppeteerLoadFetch(
           listingUrlData.data,
           true,
-          true,
+          businessData.data.scrapeImages,
           generateSlug(businessName),
-          true
+          true,
+          platformName
         );
+
+        if (platformName == "booking") {
+          //Stop scrapping images if booking scraped since all images from booking are scraped
+          businessData.data.scrapeImages = false;
+        }
+
         const listingDataFromOpenAi = await listingScrape(
           links[linksArr[i]].platformURL,
           businessName,
@@ -1027,6 +1049,13 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
             ? listingDataFromOpenAi.highlights
             : "",
           images: result.uploadedImageLocations,
+          rooms: listingDataFromOpenAi.rooms ? listingDataFromOpenAi.rooms : [],
+          surroundings: listingDataFromOpenAi.surroundings
+            ? listingDataFromOpenAi.surroundings
+            : [],
+          amenities: listingDataFromOpenAi.amenities
+            ? listingDataFromOpenAi.amenities
+            : [],
         };
       }
     } catch (error) {
@@ -1074,8 +1103,8 @@ export const scrapePlatforms2 = asyncHandler(async (req, res) => {
 
   const linksArr = Object.keys(links);
 
-  for (var i = 0; i < linksArr.length; i++) {
-    // for (var i = 0; i < 0; i++) {
+  // for (var i = 0; i < linksArr.length; i++) {
+  for (var i = 0; i < 0; i++) {
     const platformName = linksArr[i];
     const platformURL = links[linksArr[i]].platformURL;
     try {
@@ -1089,9 +1118,10 @@ export const scrapePlatforms2 = asyncHandler(async (req, res) => {
         const result = await puppeteerLoadFetch(
           listingUrlData.data,
           true,
-          true,
+          businessData.data.scrapeImages,
           generateSlug(businessName),
-          true
+          true,
+          platformName
         );
         const listingDataFromOpenAi = await listingScrape(
           links[linksArr[i]].platformURL,
@@ -1186,9 +1216,10 @@ export const locateBusiness = asyncHandler(async (req, res) => {
 // @route   POST /api/data/content-generation
 // @access  Public
 export const generateFinalContent = asyncHandler(async (req, res) => {
-  // const businessData2 = regionalOverviewSampleData;
+  // const businessData2 = finalData;
   // res.json({ businessData: businessData2 });
   // return;
+
   const prompts = req.body.prompts;
   const data = req.body.data;
   const businessData = req.body.businessData;
@@ -1200,32 +1231,6 @@ export const generateFinalContent = asyncHandler(async (req, res) => {
     true,
     businessName
   );
-  debugger;
-  // const parsedContent = {
-  //   overview: "Bobby's Surf Camp, the original surf camp in G-Land, has been a beacon for surfing adventurers for over 40 years. Situated on the southeast tip of Java within the jungle preserve of Alas Purwo National Park, Bobby's offers a raw, unforgettable experience. The camp's location along the eastern shoreline of Grajagan Bay makes it a prime spot for surfers aiming to tackle some of Indonesia's most impressive waves.",
-  //   aboutAccomodation: "Accommodation at Bobby's Surf Camp ranges from standard to VIP packages, each offering different levels of comfort and amenities. The Standard Package features 32 square meters of twin-share accommodation with a private bathroom. For a bit more luxury, the Deluxe Package includes a 36-square-meter room with either twin or queen beds, a private bathroom, and a terrace with a sitting area. Superior rooms are more spacious at 45 square meters and come equipped with hot showers, a minibar, and a TV featuring international and local channels. Those opting for the VIP Package will enjoy a two-story room with four single beds (or an optional double bed) and a hot shower bathroom, providing the height of with luxury and space.",
-  //   foodInclusions: "Bobby's Surf Camp ensures that all guests are well-fed, with meals that cater to various dietary restrictions including vegetarian, vegan, and gluten-free options. The menu is a mix of local Indonesian cuisine and Western dishes, incorporating fresh ingredients to provide a wholesome dining experience after a day on the waves.",
-  //   specificSurfSpots: "Located along Grajagan Bay, Bobby's Surf Camp is near some of the most iconic surf spots in the region. This includes the notable G-Land waves, known for their consistency and challenge, perfect for seasoned surfers looking to test their skills.",
-  //   gettingThere: "Traveling to Bobby's Surf Camp is part of the adventure. The camp is located on Bhineka Jati Jaya Street in Tuban, Bali. Guests typically arrange boat transportation to reach the southeast tip of Java, where the camp is nestled. It's essential to arrange your travel in advance, and the camp's staff can provide recommendations for the best routes and transport providers.",
-  //   faq: [
-  //     "1. Is there Internet access at Bobby's Surf Camp? - Yes, there is Wi-Fi available at the camp.",
-  //     "2. Are there medical facilities nearby? - Basic medical kits are available on-site, but for more serious conditions, the nearest hospital is in Banyuwangi.",
-  //     "3. What is the best time of year to surf at G-Land? - The surf season typically runs from May to October.",
-  //     "4. Is equipment rental available? - Yes, surfboard rentals are available at the camp.",
-  //     "5. Is there alcohol available at the resort? - Yes, there is alcohol available with a variety of options including beer and spirits.",
-  //     "6. Are there any local customs or traditions I should be aware of? - Respect for local culture and traditions is important; modest clothing is recommended when traveling through local villages.",
-  //     "7. Is there air conditioning in the rooms? - Air conditioning is available in the Superior and VIP packages.",
-  //     "8. Is Bali a safe destination? - Yes, Bali is generally safe, but like any destination, it's always good to stay vigilant and aware of your surroundings.",
-  //   ],
-  //   highlights: "First and original surf camp in G-Land; Over 40 years of operation; Popular among surf legends worldwide; Located in Alas Purwo National Park; Raw, unforgettable adventure experience; Standard Package - Twin Share Accommodation, private bathroom; Deluxe Package - Queen bed, terrace with sitting area; Superior Package - Spacious terrace, minibar, hot shower; VIP Package - Two stories, hot shower bathroom",
-  //   trip_type: "Intrepid Adventures, Luxury Holiday, Surfing in Comfort and Convenience",
-  //   accomodation_type: "Resort, Hostel",
-  //   location: "Bhineka Jati Jaya Street 1 No. 8, Tuban, Bali",
-  //   phone_numbers: "+62 82 341 599 588",
-  //   whatsapp_numbers: "+62 82 341 599 588",
-  //   emails: "reservation@bobbysgland.com",
-  //   contact_names: "",
-  // }
   const parsedContent = JSON.parse(content);
   if (parsedContent.accomodation_type) {
     businessData.data.accomodation_type = parsedContent.accomodation_type;

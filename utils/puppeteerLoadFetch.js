@@ -8,7 +8,8 @@ const puppeteerLoadFetch = async (
   justText = false,
   scrapingImages = false,
   businessSlug,
-  dynamic
+  dynamic,
+  platformName = ""
 ) => {
   const browser = await pt.launch();
   const page = await browser.newPage();
@@ -25,10 +26,43 @@ const puppeteerLoadFetch = async (
   let uploadedImageLocations = [];
   if (scrapingImages) {
     //Scrape images from browser:
-    const images = await scrapeImages(page);
+    const images = await scrapeImages(page, platformName);
     if (images.length)
       uploadedImageLocations = await saveImagesToS3(images, businessSlug);
   }
+
+  //Trying to get it from ChatGPT as well.
+  // try {
+  //   if (platformName === "booking") {
+  //     //Scrape Room Types:
+  //     await page.evaluate(() => {
+  //       const rooms = [];
+  //       if (document.querySelectorAll("#rooms_table [data-room-name]").length) {
+  //         document
+  //           .querySelectorAll("#rooms_table [data-room-name]")
+  //           .forEach((room) => {
+  //             const row = room.closest("tr");
+  //             const facilities = [];
+  //             row
+  //               .querySelectorAll(".hprt-facilities-facility")
+  //               .forEach((facility) => facilities.push(facility.innerText));
+  //             const maxOccupancy = row.querySelector(
+  //               ".hprt-table-cell-occupancy .bui-u-sr-only"
+  //             )?.innerText;
+  //             rooms.push({
+  //               roomName: room.innerText,
+  //               roomFacilities: facilities,
+  //               maxOccupancy: maxOccupancy,
+  //               priceWhenScraped: row.querySelector(".bui-price-display__value")
+  //                 ?.innerText,
+  //             });
+  //           });
+  //       }
+  //     });
+  //   }
+  // } catch (error) {
+  //   console.log("Ran into an error scrapping Booking room types".red);
+  // }
 
   if (justText) {
     await page.evaluate(() => {

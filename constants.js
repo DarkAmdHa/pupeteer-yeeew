@@ -201,6 +201,353 @@ export const regionalOverviewSampleData = {
   },
 };
 
+export const finalData = {
+  errors: [],
+  data: {
+    contact_email: "enquiries@funkyfishresort.com",
+    phone_number: "(679) 999 6360",
+    whatsapp_number: "",
+    contact_name: "",
+    location: "P.O.Box 10314, Nadi Airport, Fiji Islands.",
+    summary:
+      "- Funky Fish Beach & Surf Resort is located on Malolo Island in the heart of the Mamanuca group.\n- Positioned only 15 kms from Fiji international airport.\n- Central to world renowned Fiji Surf Breaks.\n- A water wonderland offering activities like surfing, swimming, snorkeling, and fishing.\n- Accommodation options include 1 and 2 bedroom Beach Front Bures and air-conditioned Cloudbreak View Rooms.\n- Only a short boat ride away to Wilkes Passage, Namotu Left, Swimming Pools, Cloudbreak, and Restaurants surfing spots.\n- Available activities: swimming, snorkeling, scuba diving, kiteboarding, fishing, kayaking, boat trips and more.\n- Special deals available throughout the year.\n- Offers romantic and affordable weddings with spectacular tropical backdrops.\n- Has its own fast affordable ferry transfer service from a private jetty as well as an after-hours transfer service.\n- Contact Email: enquiries@funkyfishresort.com\n- Phone number: (679) 999 6360",
+    business_name: "Funky Fish Beach & Surf Resort",
+    scrapeImages: false,
+    platformSummaries: {
+      bookingData: {
+        link: "https://www.booking.com/hotel/fj/funky-fish-beach.html",
+        textContent:
+          "Located on Malolo Island and boasting a 656-foot private beach, Funky Fish Beach & Surf Resort features a swimming pool, games room, and nightly entertainment. Accommodations include beach bungalows, private rooms, and dormitory rooms. The beachfront restaurant EPIC serves fresh seafood, Fijian and European dishes. Other amenities include The Senibua Spa, Dories Closet Boutique, and Break Bar. Activities offered include surfing, diving tours, day trips, karaoke, Fijian dancing, snorkeling, fishing, kayaking, stand up paddle boarding, and motorized water sports at additional costs.",
+        highlights:
+          "Outdoor swimming pool, Airport shuttle, Spa, Non-smoking rooms, Beachfront, Restaurant, Bar, Private beach area, Breakfast",
+        images: [
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448609758_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448613578_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/food/1719448616618_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448619655_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448622743_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448625658_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448629003_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448633063_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448636019_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448639303_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448642552_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448645877_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448649130_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448651811_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448654500_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448657309_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448660490_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448664095_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448667683_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448670748_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448673942_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448677417_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448680970_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448684029_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448686982_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448689970_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/food/1719448692916_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448695350_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448698150_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448701221_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448704350_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448707726_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448711243_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448714420_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448717351_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448719993_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/food/1719448722952_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448726072_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448729179_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448732250_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448735212_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/accomodation/1719448738553_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448741552_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/landscape/1719448744863_image.jpg",
+          "https://yeeew-scraper-bucket.s3.amazonaws.com/funky-fish-resort/others/1719448747767_image.jpg",
+        ],
+        rooms: [
+          {
+            roomName: "One Bedroom Beachfront Bungalow",
+            maxOccupancy: "2 twin beds and 1 full bed",
+            priceWhenScraped: "Show prices",
+            roomFacilities: [],
+          },
+          {
+            roomName: "Two Bedroom Beachfront Bungalow",
+            maxOccupancy:
+              "Bedroom 1: 1 queen bed, Bedroom 2: 1 twin bed and 1 queen bed, Living room: 2 sofa beds, Living room: 1 sofa bed",
+            priceWhenScraped: "Show prices",
+            roomFacilities: [],
+          },
+          {
+            roomName: "Standard Triple Room",
+            maxOccupancy: "2 twin beds and 1 full bed",
+            priceWhenScraped: "Show prices",
+            roomFacilities: [],
+          },
+          {
+            roomName: "Bungalow - Beach Front",
+            maxOccupancy: "1 queen bed",
+            priceWhenScraped: "Show prices",
+            roomFacilities: [],
+          },
+        ],
+        surroundings: [
+          {
+            surroundingType: "Restaurants & cafes",
+            suroundings: [
+              {
+                type: "Cafe/Bar",
+                name: "Ratu Nemani Island Bar",
+                distance: "2 mi",
+              },
+              {
+                type: "Restaurant",
+                name: "The Flame Tree",
+                distance: "2.1 mi",
+              },
+              {
+                type: "Restaurant",
+                name: "Dicks Place Bar & Bistro",
+                distance: "2.2 mi",
+              },
+            ],
+          },
+          {
+            surroundingType: "Beaches in the Neighborhood",
+            suroundings: [
+              {
+                type: "Beach",
+                name: "Malolo Island Beach",
+                distance: "1.5 mi",
+              },
+              {
+                type: "Beach",
+                name: "Likuliku Lagoon Resort Beach",
+                distance: "1.7 mi",
+              },
+              {
+                type: "Beach",
+                name: "Castaway Island Beach",
+                distance: "3.1 mi",
+              },
+            ],
+          },
+          {
+            surroundingType: "Closest Airports",
+            suroundings: [
+              {
+                type: "Airport",
+                name: "Nadi International Airport",
+                distance: "17 mi",
+              },
+            ],
+          },
+        ],
+        amenities: [
+          {
+            type: "Outdoor",
+            amenities: [
+              "Picnic area",
+              "Beachfront",
+              "Sun deck",
+              "Private beach area",
+              "Terrace",
+              "Garden",
+            ],
+          },
+          {
+            type: "Kitchen",
+            amenities: ["Electric kettle"],
+          },
+          {
+            type: "Activities",
+            amenities: [
+              "Live sports events (broadcast)",
+              "Cooking class",
+              "Tour or class about local culture",
+              "Happy hour",
+              "Themed dinners",
+              "Walking tours",
+              "Beach",
+              "Evening entertainment",
+              "Water sports facilities on site",
+              "Entertainment staff",
+              "Snorkeling",
+              "Diving",
+              "Hiking",
+              "Canoeing",
+              "Darts",
+              "Windsurfing",
+              "Karaoke",
+              "Ping-pong",
+              "Pool table",
+              "Playground",
+              "Game room",
+              "Skiing",
+              "Fishing",
+              "Golf course (within 2 miles)",
+            ],
+          },
+          {
+            type: "Food & Drink",
+            amenities: [
+              "Wine/Champagne",
+              "Kid-friendly buffet",
+              "Kids' meals",
+              "Special diet meals (on request)",
+              "Bar",
+              "Restaurant",
+            ],
+          },
+          {
+            type: "Internet",
+            amenities: [
+              "Wired internet is available in public areas and charges apply.",
+            ],
+          },
+          {
+            type: "Front Desk Services",
+            amenities: [
+              "Baggage storage",
+              "Tour desk",
+              "Currency exchange",
+              "24-hour front desk",
+            ],
+          },
+          {
+            type: "Entertainment & Family Services",
+            amenities: [
+              "Indoor play area",
+              "Board games/Puzzles",
+              "Babysitting/Child services",
+            ],
+          },
+          {
+            type: "Cleaning Services",
+            amenities: [
+              "Daily housekeeping",
+              "Ironing service",
+              "Dry cleaning",
+              "Laundry",
+            ],
+          },
+          {
+            type: "Business Facilities",
+            amenities: ["Fax/Photocopying", "Meeting/Banquet facilities"],
+          },
+          {
+            type: "Safety & security",
+            amenities: [
+              "Fire extinguishers",
+              "Smoke alarms",
+              "Security alarm",
+              "24-hour security",
+              "Safe",
+            ],
+          },
+          {
+            type: "General",
+            amenities: [
+              "Shared lounge/TV area",
+              "Designated smoking area",
+              "Air conditioning",
+              "Wake-up service",
+              "Packed lunches",
+              "Fan",
+              "Family rooms",
+              "Ironing facilities",
+              "Airport shuttle",
+              "Non-smoking rooms",
+              "Room service",
+            ],
+          },
+          {
+            type: "Spa",
+            amenities: [
+              "Spa lounge/Relaxation area",
+              "Spa facilities",
+              "Beach umbrellas",
+              "Beach chairs/Loungers",
+              "Open-air bath",
+              "Massage",
+              "Spa",
+            ],
+          },
+        ],
+      },
+    },
+    accomodation_type: "Resort, Rental Accommodation",
+    trip_type: "Surfing in Comfort and Convenience, Family Holiday",
+    email: "enquiries@funkyfishresort.com",
+    content: {
+      overview:
+        "Situated on Malolo Island in the vibrant Mamanuca group, Funky Fish Beach & Surf Resort is a mere 15 kms from Fiji's Nadi International Airport. A haven for water sports enthusiasts, it offers an array of activities like surfing, swimming, snorkeling, and fishing. Surf spots such as Cloudbreak, Restaurants, Namotu Lefts, and Wilkes Passage are a quick boat ride away. The resort features one and two-bedroom Beach Front Bures, air-conditioned Cloudbreak View Rooms, and private rooms. Amenities include a restaurant, spa, private beach area, swimming pool, games room, and nightly entertainment. Special deals and romantic weddings with tropical backdrops are also available.",
+      aboutAccomodation:
+        "Funky Fish Beach & Surf Resort offers a variety of accommodation options. The One Bedroom Beachfront Bungalow can accommodate up to three people with 2 twin beds and 1 full bed. The Two Bedroom Beachfront Bungalow is perfect for families or groups, featuring two bedrooms and a living room that can collectively host up to eight people. Each bungalow includes air conditioning and mosquito nets. The Standard Triple Room and Bungalow - Beach Front provide additional lodging options, all with private bathrooms. The air-conditioned Cloudbreak View Rooms also promise comfort with convenient viewing of the surf spot.",
+      foodInclusions:
+        "The resort's beachfront restaurant, EPIC, serves a selection of Fijian, European, and fresh seafood dishes. Vegetarian, vegan, and gluten-free options are available upon request. For a more casual experience, guests can visit the Ratu Nemani Island Bar, which is located two miles away. Additionally, a kid-friendly buffet and special diet meals (on request) ensure every guest's needs are met.",
+      specificSurfSpots:
+        "A short boat ride will take you to some of Fiji's best surf spots, including Cloudbreak, Restaurants, Namotu Lefts, and Wilkes Passage. Each location offers unique waves suited for experienced surfers and opportunities to experience Fiji's famed surf culture.",
+      gettingThere:
+        "Funky Fish Beach & Surf Resort is 15 kms from Nadi International Airport. The resort provides a fast, affordable ferry transfer service from its private jetty, along with an after-hours transfer service for late arrivals. For those who prefer a direct route, booking a private charter boat is another available option.",
+      highlights:
+        "Outdoor swimming pool; Airport shuttle; Spa; Non-smoking rooms; Beachfront; Restaurant; Bar; Private beach area; Breakfast; Central to world-renowned Fiji Surf Breaks; Available activities: swimming, snorkeling, scuba diving, kiteboarding, fishing, kayaking, boat trips, and more; Special deals available throughout the year; Offers romantic and affordable weddings with spectacular tropical backdrops; Has its own fast affordable ferry transfer service from a private jetty as well as an after-hours transfer service",
+      faq: [
+        {
+          faq_question: "Is alcohol available at the resort?",
+          faq_answer:
+            "Yes, the resort’s Break Bar serves a variety of alcoholic beverages.",
+        },
+        {
+          faq_question: "What kind of water sports can I engage in?",
+          faq_answer:
+            "Activities include surfing, snorkeling, scuba diving, kiteboarding, kayaking, and motorized water sports.",
+        },
+        {
+          faq_question: "Do you offer family-friendly services?",
+          faq_answer:
+            "Yes, the resort has family rooms, kids' meals, an indoor play area, board games, and child services.",
+        },
+        {
+          faq_question: "Is there an airport shuttle service?",
+          faq_answer:
+            "Yes, Funky Fish offers an airport shuttle service for ease of transit from Nadi International Airport.",
+        },
+        {
+          faq_question: "Are special dietary meals available?",
+          faq_answer:
+            "Yes, the restaurant offers vegetarian, vegan, and gluten-free options on request.",
+        },
+        {
+          faq_question: "What types of accommodations are available?",
+          faq_answer:
+            "The resort offers one and two-bedroom Beach Front Bures, air-conditioned Cloudbreak View Rooms, standard triple rooms, and private bungalows.",
+        },
+        {
+          faq_question: "Is there a direct transfer service to the surf spots?",
+          faq_answer:
+            "Yes, the resort provides boat rides to popular surf spots like Cloudbreak, Wilkes Passage, and Restaurants.",
+        },
+        {
+          faq_question: "What are the check-in and check-out times?",
+          faq_answer:
+            "Check-in is typically after 2 PM, and check-out is usually by 11 AM.",
+        },
+      ],
+      trip_type: "Surfing in Comfort and Convenience, Family Holiday",
+      accomodation_type: "Resort, Rental Accommodation",
+      location: "P.O.Box 10314, Nadi Airport, Fiji Islands.",
+      phone_numbers: "(679) 999 6360",
+      whatsapp_number: "",
+      email: "enquiries@funkyfishresort.com",
+      contact_name: "",
+    },
+  },
+};
+
 export const categorizationLabels = {
   food: ["food"],
   landscape: ["beach", "sky", "landscape"],
@@ -212,5 +559,4 @@ export const categorizationLabels = {
     "pillow",
     "bedding",
   ],
-  
 };

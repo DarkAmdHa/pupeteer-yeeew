@@ -50,7 +50,15 @@ var acfData = {
     geolocation_lat: "ASDnull",
     geolocation_long: "asdsad",
   },
-}
+  acf: {
+    resort_highlights: [
+      {
+        highlight_icon: "",
+        highlights: "highlight",
+      },
+    ],
+  },
+};
 
 const postData = await editData(url, acfData);
 // const postData = await fetchData(url);
