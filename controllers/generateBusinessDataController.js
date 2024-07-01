@@ -984,7 +984,7 @@ export const scrapePlatforms = asyncHandler(async (req, res) => {
   const businessData = req.body.businessData;
 
   const businessName = data[0];
-  businessData.data.scrapeImages = true;
+  businessData.data.scrapeImages = false;
   businessData.data.platformSummaries = {};
 
   const links = {
